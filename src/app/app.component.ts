@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favorite: string[] = [];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
@@ -20,6 +20,17 @@ export class AppComponent {
   }
 
   onMarkAsFavorite(name: string) {
-    this.favorite = name;
+    const index = this.favorite.indexOf(name);
+
+    if (index !== -1) {
+      this.favorite.splice(index, 1);
+      return;
+    }
+
+    this.favorite.push(name);
+  }
+
+  get favourites() {
+    return this.favorite.join(", ")
   }
 }

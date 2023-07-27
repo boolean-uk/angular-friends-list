@@ -1,4 +1,5 @@
 <div>
   {{ name }}
-  <button (click)="markAsFavorite()">favorite</button>
+  <button *ngIf="!isFavorite" (click)="markAsFavorite()">favorite</button>
+  <button *ngIf="isFavorite" (click)="unmarkAsFavorite()">unfavorite</button>
 </div>
