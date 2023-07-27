@@ -8,3 +8,11 @@
     border: 2px solid #1d1629;
     border-radius: 3px;
   }
+  .person button {
+    background-color: #7e335b;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
