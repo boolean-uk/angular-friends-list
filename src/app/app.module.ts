@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {
   FaIconLibrary,
@@ -20,7 +21,14 @@ import { PeopleComponent } from './people/people.component';
     FavoriteComponent,
     CapitalizePipe,
   ],
-  imports: [BrowserModule, FormsModule, NgbModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    NgbModule,
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
