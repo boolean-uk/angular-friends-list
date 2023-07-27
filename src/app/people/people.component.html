@@ -1,0 +1,17 @@
+<li *ngIf="person">
+  {{ person.name }}
+
+  <button
+    (click)="onClick()"
+    *ngIf="!person.isFav"
+  >
+    Add to favorites
+  </button>
+
+  <button
+    (click)="onClick()"
+    *ngIf="person.isFav"
+  >
+    Remove from favorites
+  </button>
+</li>
