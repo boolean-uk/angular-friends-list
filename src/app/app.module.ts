@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { MyFriendsComponent } from './my-friends/my-friends.component';
+import { MyFriendsComponent } from './people/people.component';
 
 @NgModule({
   declarations: [AppComponent, MyFriendsComponent],

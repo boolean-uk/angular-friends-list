@@ -3,19 +3,14 @@
   <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
   <button (click)="addFriend()">Add friend</button>
 </div>
-<div class="favorite"> 
-    <span >My favourite people: {{getFavoritesAsArray().join(', ')}}</span> 
+<div class="favorite">
+  <span>My favourite people: {{ getFavoritesAsArray().join(", ") }}</span>
 </div>
 <div class="people">
-
-  <ul>
-    <table>
-      <app-my-friends
-        *ngFor="let person of people"
-        [prs]="person"
-        (addFavourite)="addFavourite($event)"
-        (removeFavourite)="removeFavourite($event)"
-      ></app-my-friends>
-    </table>
-  </ul>
+  <app-people
+    *ngFor="let person of people"
+    [prs]="person"
+    (addFavourite)="addFavourite($event)"
+    (removeFavourite)="removeFavourite($event)"
+  ></app-people>
 </div>
