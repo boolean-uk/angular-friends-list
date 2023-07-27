@@ -1,0 +1,5 @@
+<h1>My friends: </h1>
+<div *ngFor="let person of people">
+  <h2>{{ person.name }}</h2>
+  <button (click)="select(person)"> Add to favourites </button> 
+</div>
