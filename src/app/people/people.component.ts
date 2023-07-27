@@ -5,16 +5,24 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   template: `
     <div class="person">
       {{ personName }}
-      <button (click)="setFavorite()">Set as favorite</button>
+      <button (click)="toggleFavorite()">
+        {{ isFavorite ? 'Remove' : 'Set as favorite' }}
+      </button>
     </div>
   `,
   styleUrls: ['./people.component.css'],
 })
 export class PeopleComponent {
   @Input() personName: string = '';
+  @Input() isFavorite: boolean = false;
   @Output() favoriteSelected = new EventEmitter<string>();
+  @Output() removeFavorite = new EventEmitter<string>();
 
-  setFavorite() {
-    this.favoriteSelected.emit(this.personName);
+  toggleFavorite() {
+    if (this.isFavorite) {
+      this.removeFavorite.emit(this.personName);
+    } else {
+      this.favoriteSelected.emit(this.personName);
+    }
   }
 }
