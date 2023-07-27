@@ -21,5 +21,3 @@ export class PeopleComponent {
     this.clicked.emit(this.name);
   }
 }
-
-// Create a people component that will display a person's name and has a button to allow a user to select them as a favorite
