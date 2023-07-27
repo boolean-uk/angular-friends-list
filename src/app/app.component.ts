@@ -5,9 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favorite: string[] = [];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
@@ -17,5 +18,13 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  onFavoriteEvent(person: string) {
+    if(this.favorite.includes(person)) {
+      this.favorite.splice(this.favorite.indexOf(person), 1);
+    } else {
+      this.favorite.push(person);
+    }
   }
 }
