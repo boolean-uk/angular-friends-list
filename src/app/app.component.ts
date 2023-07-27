@@ -5,7 +5,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class AppComponent {
   newFriend: string | undefined = undefined;
-  favorite: string | null = null;
+  favorite: string[] = [];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
   @Output() friendAdded: EventEmitter<string> = new EventEmitter<string>();
@@ -13,6 +13,9 @@ export class AppComponent {
 
   addFriend() {
     if (!this.newFriend) {
+      return;
+    }
+    if (this.people.find((p: string) => p === this.newFriend)) {
       return;
     }
 
@@ -23,6 +26,17 @@ export class AppComponent {
   }
 
   setFavourite(data: string) {
-    this.favorite = data;
+    if (this.favorite.findIndex((f: string) => f === data) === -1) {
+      this.favorite.push(data);
+    }
   }
+
+  removeFromFavourite(data: string) {
+    this.favorite = this.favorite.filter((f: string) => f !== data)
+  }
+
+  isFavourite(person: string): boolean {
+    return !(this.favorite.findIndex((f: string) => f === person) === -1)
+  }
+
 }

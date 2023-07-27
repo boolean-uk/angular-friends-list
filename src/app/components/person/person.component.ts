@@ -6,10 +6,16 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 export class PersonComponent {
 
   @Input('person') person: string = ''
+  @Input('isFavourite') isFavourite: boolean = false
   @Output() favourite: EventEmitter<string> = new EventEmitter<string>();
+  @Output() unfavourite: EventEmitter<string> = new EventEmitter<string>();
 
 
   chooseFavourite() {
-    this.favourite.emit(this.person);
+    this.favourite.emit(this.person)
+  }
+
+  removeFavourite() {
+    this.unfavourite.emit(this.person)
   }
 }
