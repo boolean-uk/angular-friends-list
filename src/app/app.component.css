@@ -2,16 +2,29 @@
   box-sizing: border-box;
   display: block;
   padding: 0 0.5em;
+  background-color:rgb(191, 187, 247)
 }
 
 .favorite {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color:rgb(165, 159, 255)
 }
 
 .people {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 0.2em;
+  background-color:rgb(228, 203, 235)
+}
+
+.add-friend button {
+  background-color: #7e335b;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5em 1em;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }

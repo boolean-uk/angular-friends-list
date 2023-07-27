@@ -1,0 +1,18 @@
+.person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    background: rgb(228,116,141);
+    background: linear-gradient(90deg, rgba(228,116,141,1) 0%, rgba(217,154,222,1) 50%, rgba(183,243,255,1) 100%);
+    border: 2px solid #1d1629;
+    border-radius: 3px;
+  }
+  .person button {
+    background-color: #7e335b;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
