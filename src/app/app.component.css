@@ -2,16 +2,19 @@
   box-sizing: border-box;
   display: block;
   padding: 0 0.5em;
+  background-color:rgb(216, 216, 216)
 }
 
 .favorite {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color:rgb(255, 50, 50)
 }
 
 .people {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 0.2em;
+  background-color:rgb(245, 120, 120)
 }
