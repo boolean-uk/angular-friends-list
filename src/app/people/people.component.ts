@@ -7,9 +7,18 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class PeopleComponent {
   @Input() person: string = ''
+  @Input() favourites: string[] = []
   @Output() favouriteChecked: EventEmitter<string> = new EventEmitter()
+  @Output() favouriteRemoved: EventEmitter<string> = new EventEmitter()
+  isFavourite: boolean = false;
 
-  clicked() {
+  clickedAddFavourite() {
     this.favouriteChecked.emit(this.person);
+    this.isFavourite = true;
+  }
+
+  clickedRemoveFavourite() {
+    this.favouriteRemoved.emit(this.person);
+    this.isFavourite = false;
   }
 }
