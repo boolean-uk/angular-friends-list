@@ -1,0 +1,27 @@
+.person {
+  display: inline-block;
+  padding: 20px;
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button1 {
+  float: right;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.button1:first-of-type {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.button1:last-of-type {
+  background-color: #f44336;
+  color: #fff;
+}
