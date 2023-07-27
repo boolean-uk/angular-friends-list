@@ -1,11 +1,16 @@
+<body>
 <h1>Friends list</h1>
 <div class="add-friend">
-  <input type="text" (ngModel)="(newFriend)" placeholder="Friend name" />
-  <button (click)="addFriend()">Add friend</button>
+  <input  class = "custom-input"type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
+  <button class="custom-button" (click)="addFriend()">Add friend</button>
 </div>
 <div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+  <h2>My favorite person is: {{ favorite }}</h2>
 </div>
 <div class="people">
-  <!-- Add your people component here -->
+  
+    <app-list-people *ngFor="let friend of people" [friend]="friend"
+    (becomeFav)="becomeFav($event)"></app-list-people>
+    
 </div>
+</body>
