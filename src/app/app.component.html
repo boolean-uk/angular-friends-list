@@ -1,10 +1,12 @@
 <h1>Friends list</h1>
 <div class="add-friend">
-  <input type="text" (ngModel)="(newFriend)" placeholder="Friend name" />
+  <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
   <button (click)="addFriend()">Add friend</button>
 </div>
 <div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+  <p>My favorite person is:&nbsp;</p>
+    <p *ngFor="let fav of favorite; last as isLast"> {{ fav }}<span *ngIf="!isLast">,&nbsp;</span>
+    </p>
 </div>
 <div class="people">
   <ul>
