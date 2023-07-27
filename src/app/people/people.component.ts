@@ -12,7 +12,6 @@ export class PeopleComponent {
 
   clicked() {
     this.favouritePerson.emit(this.person);
-    console.log(this.person);
   }
 
   remove(){

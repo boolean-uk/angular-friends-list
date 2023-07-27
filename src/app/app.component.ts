@@ -21,8 +21,10 @@ export class AppComponent {
   }
 
   removePerson(person: string){
-    const index: number = this.favourite.indexOf(person);
-    this.favourite.splice(index, 1);
-    console.log(this.favourite);
+    if(this.favourite.includes(person)){
+      const index: number = this.favourite.indexOf(person);
+      this.favourite.splice(index, 1);
+      console.log(this.favourite);
+    }
   }
 }
