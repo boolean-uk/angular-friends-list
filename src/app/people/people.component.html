@@ -1,7 +1,5 @@
-<ul>
-    <div class="grid-item" *ngIf="person">
-        {{ person }}
-        <button (click)="clicked()">Favourite</button>
-      </div>
-</ul>
-
+<div class="div">
+  {{ person }}
+  <button (click)="clicked()" class="favourite">Favourite</button>
+  <button (click)="remove()" class="remove">Remove</button>
+</div>
