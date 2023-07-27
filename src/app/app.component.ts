@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  @Input('newFried') newFriend: string | null = null;
+  newFriend: string | null = null;
   favorites: string[] = [];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
