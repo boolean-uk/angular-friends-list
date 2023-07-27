@@ -6,13 +6,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent {
-  title = 'Friends list';
-  items =[]
-
-  @Input('friend') friend: { name: string} | null = null;
-  @Output('addToFriendsList') addToFriendsList = new EventEmitter();
+  @Input('friend') friend: string | null = null;
+  @Output('addToFriendsList') addFriend = new EventEmitter();
   clicked() {
-    this.addToFriendsList.emit(this.friend);
+    this.addFriend.emit(this.friend);
   }
 }
 
