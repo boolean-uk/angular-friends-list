@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Person } from '../data.service';
 
 @Component({
   selector: 'app-people',
@@ -6,10 +7,17 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./people.component.css'],
 })
 export class PeopleComponent {
-  @Input('name') name: string | null = null;
+  @Input('person') person: Person | null = null;
   @Output('selectFavorite') selectFavorite = new EventEmitter();
+  @Output('removeFriend') removeFriend = new EventEmitter<Person>();
 
-  clicked() {
-    this.selectFavorite.emit(this.name);
+  favoriteClicked(event: Event) {
+    this.selectFavorite.emit(this.person);
+  }
+
+  removeClicked(event: Event) {
+    if (this.person) {
+      this.removeFriend.emit(this.person);
+    }
   }
 }

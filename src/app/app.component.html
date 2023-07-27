@@ -1,4 +1,10 @@
 <div class="container p-3">
+  <div style="min-height: 4em">
+    <div class="alert alert-danger" role="alert" *ngIf="showFriendAddedAlert">
+      This person is already in your favorites!
+    </div>
+  </div>
+
   <h1 class="text-primary mb-3">Friends list</h1>
 
   <div class="row mb-3">
@@ -19,8 +25,11 @@
 
   <div class="row" style="min-height: 7em">
     <div class="favorite mb-3 flex-nowrap overflow-auto">
-      <div class="me-3 d-inline-flex" *ngFor="let name of favorites">
-        <app-favorite [name]="name" (removeFavorite)="removeFavorite($event)" />
+      <div class="me-3 d-inline-flex" *ngFor="let person of favorites">
+        <app-favorite
+          [name]="person.name"
+          (removeFavorite)="removeFavorite(person)"
+        />
       </div>
     </div>
   </div>
@@ -28,8 +37,12 @@
   <h2 class="text-secondary">All of my friends:</h2>
 
   <div class="people row">
-    <div class="col-md-4" *ngFor="let name of people">
-      <app-people [name]="name" (selectFavorite)="selectFavorite($event)" />
+    <div class="col-md-4" *ngFor="let person of people">
+      <app-people
+        [person]="person"
+        (selectFavorite)="selectFavorite($event)"
+        (removeFriend)="removeFriend($event)"
+      />
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from './data.service';
+import { DataService, Person } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,9 @@ import { DataService } from './data.service';
 })
 export class AppComponent implements OnInit {
   newFriend: string | null = null;
-  favorites: string[] = [];
-  people: string[] = [];
+  favorites: Person[] = [];
+  people: Person[] = [];
+  showFriendAddedAlert: boolean = false;
 
   constructor(private dataService: DataService) {}
 
@@ -27,21 +28,36 @@ export class AppComponent implements OnInit {
     if (!this.newFriend) {
       return;
     }
-    this.dataService.addPerson(this.newFriend as string).subscribe(() => {
-      this.people.push(this.newFriend as string);
+    this.dataService.addPerson(this.newFriend).subscribe((person) => {
+      this.people.push(person);
       this.newFriend = null;
     });
   }
 
-  selectFavorite(name: string) {
-    this.dataService.addFavorite(name).subscribe(() => {
-      this.favorites.push(name);
+  removeFriend(person: Person) {
+    console.log(person);
+    this.dataService.removePerson(person.id).subscribe(() => {
+      this.people = this.people.filter((item: Person) => item !== person);
     });
   }
 
-  removeFavorite(person: string) {
-    this.dataService.removeFavorite(person).subscribe(() => {
-      this.favorites = this.favorites.filter((item: string) => item !== person);
+  selectFavorite(person: Person) {
+    if (this.favorites.some((favorite) => favorite.name === person.name)) {
+      this.showFriendAddedAlert = true;
+      setTimeout(() => (this.showFriendAddedAlert = false), 3000);
+      return;
+    }
+
+    this.dataService.addFavorite(person.name).subscribe((favorite) => {
+      this.favorites.push(favorite);
+    });
+  }
+
+  removeFavorite(favorite: Person) {
+    this.dataService.removeFavorite(favorite.id).subscribe(() => {
+      this.favorites = this.favorites.filter(
+        (item: Person) => item !== favorite
+      );
     });
   }
 }

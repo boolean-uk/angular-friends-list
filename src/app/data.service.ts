@@ -2,6 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+export interface Person {
+  id: number;
+  name: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -10,23 +15,27 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  getPeople(): Observable<string[]> {
-    return this.http.get<string[]>(`${this.apiUrl}/people`);
+  getPeople(): Observable<Person[]> {
+    return this.http.get<Person[]>(`${this.apiUrl}/people`);
   }
 
-  addPerson(name: string): Observable<string> {
-    return this.http.post<string>(`${this.apiUrl}/people`, { name });
+  addPerson(name: string): Observable<Person> {
+    return this.http.post<Person>(`${this.apiUrl}/people`, { name });
   }
 
-  getFavorites(): Observable<string[]> {
-    return this.http.get<string[]>(`${this.apiUrl}/favorites`);
+  removePerson(id: number): Observable<{}> {
+    return this.http.delete<{}>(`${this.apiUrl}/people/${id}`);
   }
 
-  addFavorite(name: string): Observable<string> {
-    return this.http.post<string>(`${this.apiUrl}/favorites`, { name });
+  getFavorites(): Observable<Person[]> {
+    return this.http.get<Person[]>(`${this.apiUrl}/favorites`);
   }
 
-  removeFavorite(name: string): Observable<string> {
-    return this.http.delete<string>(`${this.apiUrl}/favorites/${name}`);
+  addFavorite(name: string): Observable<Person> {
+    return this.http.post<Person>(`${this.apiUrl}/favorites`, { name });
+  }
+
+  removeFavorite(id: number): Observable<{}> {
+    return this.http.delete<{}>(`${this.apiUrl}/favorites/${id}`);
   }
 }
