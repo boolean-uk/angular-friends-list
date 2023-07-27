@@ -26,5 +26,6 @@ export class AppComponent {
       this.favourite.splice(index, 1);
       console.log(this.favourite);
     }
+    
   }
 }
