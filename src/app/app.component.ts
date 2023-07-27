@@ -19,7 +19,7 @@ export class AppComponent {
     this.newFriend = null;
   }
 
-  addToFavourite(people: string) {
+  addToFavorite(people: string) {
     this.favorite = people;
   }
 }

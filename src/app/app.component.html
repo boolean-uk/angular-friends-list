@@ -1,6 +1,6 @@
 <h1>Friends list</h1>
 <div class="add-friend">
-  <input type="text" (ngModel)="(newFriend)" placeholder="Friend name" />
+  <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
   <button (click)="addFriend()">Add friend</button>
 </div>
 <div class="favorite">
@@ -8,6 +8,6 @@
 </div>
 <div class="people">
   <ul>
-    <app-people *ngFor="let people of people" [people]="people" (addToFavourite)="addToFavourite($event)" />
+    <app-people *ngFor="let people of people" [people]="people" (addToFavorite)="addToFavorite($event)" />
   </ul>
 </div>
