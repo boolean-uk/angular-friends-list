@@ -18,13 +18,16 @@ export class AppComponent {
     if (!this.newFriend) {
       return;
     }
-    this.people.push(this.newFriend);
+    if (!this.people.find((name) => name === this.newFriend)) {
+      this.people.push(this.newFriend);
+    }
     this.newFriend = null;
   }
 
   selectAsFavourite(name: string) {
-    if (!this.favorites.includes(name)){this.favorites.push(name);
-    } 
+    if (!this.favorites.includes(name)) {
+      this.favorites.push(name);
+    }
   }
 
   removeFavoritePerson(person: string) {
