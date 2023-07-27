@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent {
-  @Input('friend') friend: string | null = null;
+  @Input('friend') friend: { name: string, isFavorite: boolean } | null = null;
   @Output('addToFriendsList') addFriend = new EventEmitter();
   clicked() {
     this.addFriend.emit(this.friend);

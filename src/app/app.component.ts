@@ -6,11 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  newFriend: string | null = null;
-  favorite: string[] = [];
   isFavorite: boolean = false;
+  favorite: {name: string, isFavorite: boolean}[] = [];
+  newFriend: {name: string, isFavorite: boolean}| null = null;
 
-  people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  people = [
+    {name: 'lewis', isFavorite:false},
+    {name: 'jules', isFavorite:false},
+    {name: 'ed', isFavorite:false},
+    {name: 'nathan', isFavorite:false},
+    {name: 'dave', isFavorite:false},
+    {name: 'nigel', isFavorite:false},
+    ]
 
   addFriend() {
     if (!this.newFriend) {
@@ -20,12 +27,14 @@ export class AppComponent {
     this.newFriend = null;
   }
 
-  setFavourite(friend: string) {
+  setFavourite(friend: {name: string, isFavorite: boolean}) {
     if(!this.favorite.includes(friend)) {
       this.favorite.push(friend)
-      this.isFavorite = true
+      friend.isFavorite = true
     }
-    else
+    else {
       this.favorite.splice(this.favorite.indexOf(friend), 1)
+      friend.isFavorite = false
+    }
   }
 }

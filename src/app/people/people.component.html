@@ -1,4 +1,5 @@
 <li *ngIf="friend">
-    {{ friend }}
-    <button (click)="clicked()">Favourite</button>
+    {{ friend.name }}
+    <button *ngIf="!friend.isFavorite" (click)="clicked()">Favourite</button>
+  <button *ngIf="friend.isFavorite" (click)="clicked()">Remove</button>
   </li>
