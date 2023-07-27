@@ -18,4 +18,8 @@ export class AppComponent {
     this.people.push(this.newFriend);
     this.newFriend = null;
   }
+
+  addFavourite(person: string) {
+    this.favorite = person;
+  }
 }
