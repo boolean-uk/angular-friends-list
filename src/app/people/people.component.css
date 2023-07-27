@@ -1,0 +1,50 @@
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    border-radius: 5px;
+  }
+  
+  .name-tag {
+    font-size: 18px;
+    font-weight: 500;
+    color: #343a40;
+  }
+  
+  .button-container {
+    display: flex;
+  }
+  
+  .button {
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .fav-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .fav-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .unfav-button {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .unfav-button:hover {
+    background-color: #c82333;
+  }
+  

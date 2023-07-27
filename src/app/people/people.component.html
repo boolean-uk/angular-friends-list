@@ -1,0 +1,19 @@
+<div class="container">
+  <span class="name-tag">{{ name }}</span>
+  <span class="button-container">
+    <button
+      class="button fav-button"
+      *ngIf="!isFavorite"
+      (click)="markAsFavorite()"
+    >
+      ★ Favorite
+    </button>
+    <button
+      class="button unfav-button"
+      *ngIf="isFavorite"
+      (click)="unmarkAsFavorite()"
+    >
+      ☆ Unfavorite
+    </button>
+  </span>
+</div>
