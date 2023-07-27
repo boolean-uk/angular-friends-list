@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+
+.body {
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .add-friend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 60%;
+    margin: auto
+  }
+  
+  .add-friend input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .add-friend button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .favorite  {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+  }
+  .favorite p {
+    font-weight: bold;
+  }
+  
+  .favorite ul {
+    display: flex; 
+    flex-direction: row; 
+    list-style: none;
+  }
+  
+  .favorite li {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .people ul {
+    width: 75%;
+    margin: auto;
+  }
+
+  .people ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .people li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .people li button {
+    padding: 5px 10px;
+    margin: 0 5px ;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
