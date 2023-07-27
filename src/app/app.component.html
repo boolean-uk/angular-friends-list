@@ -5,8 +5,9 @@
 </div>
 <div class="favorite">
   <p>My favorite person is:&nbsp;</p>
-    <p *ngFor="let fav of favorite; last as isLast"> {{ fav }}<span *ngIf="!isLast">,&nbsp;</span>
-    </p>
+  <p *ngFor="let fav of favorite; last as isLast">
+    {{ fav }}<span *ngIf="!isLast">,&nbsp;</span>
+  </p>
 </div>
 <div class="people">
   <ul>
@@ -14,6 +15,7 @@
       *ngFor="let person of people"
       [person]="person"
       (addToFav)="addToFav(person)"
+      (unfollow)="unfollow(person)"
     >
     </app-people>
   </ul>

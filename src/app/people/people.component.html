@@ -1,3 +1,7 @@
 <li *ngIf="person">
-  {{ person }} <button (click)="clicked()">Favourite</button>
+  {{ person }} <button (click)="add()">Favourite</button> &nbsp;<button
+    (click)="remove()"
+  >
+    Unfollow
+  </button>
 </li>

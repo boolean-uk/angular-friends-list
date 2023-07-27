@@ -8,8 +8,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class PeopleComponent {
   @Input('person') person: string | null = null;
   @Output('addToFav') addToFav = new EventEmitter();
-  clicked() {
-    console.log('clicked');
+  @Output('unfollow') unfollow = new EventEmitter();
+  add() {
     this.addToFav.emit(this.person);
+  }
+  remove() {
+    this.unfollow.emit(this.person);
   }
 }
