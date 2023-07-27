@@ -7,9 +7,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class PeopleComponent {
   @Input('name') name: string | null = null;
-  @Output('selectAsFavourite') selectAsFavourite = new EventEmitter();
+  @Output('selectFavorite') selectFavorite = new EventEmitter();
 
   clicked() {
-    this.selectAsFavourite.emit(this.name);
+    this.selectFavorite.emit(this.name);
   }
 }

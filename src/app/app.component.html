@@ -1,39 +1,35 @@
-<h1>Friends list</h1>
-<div class="row mb-3">
-  <div class="col">
-    <input
-      class="form-control"
-      type="text"
-      [(ngModel)]="newFriend"
-      placeholder="Friend name"
-    />
-  </div>
-  <div class="col">
-    <button class="btn btn-primary" (click)="addFriend()">Add friend</button>
-  </div>
-</div>
+<div class="container p-3">
+  <h1 class="text-primary mb-3">Friends list</h1>
 
-<div class="favorite row mb-3">
-  <div class="col">
-    <h2>My favourite people:</h2>
+  <div class="row mb-3">
+    <div class="col-3">
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="newFriend"
+        placeholder="Friend name"
+      />
+    </div>
+    <div class="col">
+      <button class="btn btn-primary" (click)="addFriend()">Add</button>
+    </div>
   </div>
-  <div class="col">
-    <ul>
-      <li *ngFor="let item of favorites">
-        <span class="name">{{ item }}</span>
-        <button class="btn btn-danger" (click)="removeFavoritePerson(item)">
-          Remove
-        </button>
-      </li>
-    </ul>
+
+  <h2 class="text-secondary text-center mb-3">My favourite people:</h2>
+
+  <div class="row" style="min-height: 7em">
+    <div class="favorite mb-3 flex-nowrap overflow-auto">
+      <div class="me-3 d-inline-flex" *ngFor="let name of favorites">
+        <app-favorite [name]="name" (removeFavorite)="removeFavorite($event)" />
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-secondary">All of my friends:</h2>
+
+  <div class="people row">
+    <div class="col-md-4" *ngFor="let name of people">
+      <app-people [name]="name" (selectFavorite)="selectFavorite($event)" />
+    </div>
   </div>
 </div>
-<h2>All of my friends:</h2>
-<div class="people">
-  <app-people
-    *ngFor="let name of people"
-    [name]="name"
-    (selectAsFavourite)="selectAsFavourite($event)"
-  />
-</div>
-<div class="people"></div>

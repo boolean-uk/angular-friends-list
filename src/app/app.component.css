@@ -1,4 +1,4 @@
-:host {
+/* :host {
   box-sizing: border-box;
   display: block;
   padding: 0 0.5em;
@@ -9,7 +9,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid #ccc; */
 }
 
 .favorite ul {
@@ -39,4 +38,4 @@
 .name {
   font-size: 1.3em;
   margin-right: 10px;
-}
+} */
