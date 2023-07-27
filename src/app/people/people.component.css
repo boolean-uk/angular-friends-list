@@ -1,0 +1,9 @@
+.person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    background-color: rgb(230, 229, 235);
+    border: 2px solid #ccc;
+    border-radius: 3px;
+  }
