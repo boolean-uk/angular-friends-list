@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background: url('https://img.freepik.com/premium-vector/pink-hearts-background_76844-1432.jpg?w=2000');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: black;
+  }
+  
+  h2 {
+    color: black;
+  }
+  
+  button {
+    margin: 10px 0;
+    background-color: #DE3163;
+    color: white;
+    border: black;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #DE3163;
+  }
+  
+  div {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+  }
+  
+  .app-people {
+    margin-bottom: 50px;
+  }
+  
+  .input-field {
+    display: block;
+    width: 40%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #DE3163;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
