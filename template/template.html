@@ -1,2 +1,2 @@
 <p>{{person}}</p>
-<button (click) = "setFavorite()">Favourite</button>
+<button *ngIf="!isFavorite" (click) = "setFavorite()">Favourite</button>

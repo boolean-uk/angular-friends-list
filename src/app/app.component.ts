@@ -29,6 +29,7 @@ export class AppComponent {
 
   removeFavorite(favorite: string) {
     this.favorites = this.favorites.filter(person => person != favorite)
+
     }
 
 }

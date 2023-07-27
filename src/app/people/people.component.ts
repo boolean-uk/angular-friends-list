@@ -7,11 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class PeopleComponent {
   @Input() person: string | undefined = undefined;
-  @Output() favoriteSelected : EventEmitter<string> = new EventEmitter<string>();
+  @Input() isFavorite: boolean = false;
+  @Output() favoriteSelected: EventEmitter<string> = new EventEmitter<string>();
 
-  setFavorite(){
+
+  setFavorite() {
     this.favoriteSelected.emit(this.person)
-
   }
-
 }

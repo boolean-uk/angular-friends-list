@@ -10,5 +10,5 @@
   </ul>
 </div>
 <div class="people">
-  <app-people *ngFor="let person of people" [person] = "person" (favoriteSelected) = "OnsetFavorite(person)"></app-people>
+  <app-people *ngFor="let person of people" [person] = "person" [isFavorite] = "favorites.includes(person)" (favoriteSelected) = "OnsetFavorite(person)"></app-people>
 </div>
