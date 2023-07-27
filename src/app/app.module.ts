@@ -1,13 +1,24 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { AppComponent } from './app.component';
+import { PeopleComponent } from './people/people.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { CreatePersonComponent } from './create-person/create-person.component';
+
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, FormsModule],
+  declarations: [
+    AppComponent,
+    PeopleComponent,
+    FavoritesComponent,
+    CreatePersonComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
