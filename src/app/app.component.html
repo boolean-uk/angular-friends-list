@@ -7,5 +7,12 @@
   <p>My favorite person is: {{ favorite }}</p>
 </div>
 <div class="people">
-  <!-- Add your people component here -->
+  
+<ul>
+  <app-item
+    *ngFor="let friend of friends"
+    [friend]="friend"
+    (addToFriendsList)="addToFriendsList($event)"
+  />
+</ul>
 </div>
