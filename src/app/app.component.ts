@@ -6,8 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+removeFavorite(_t13: string) {
+throw new Error('Method not implemented.');
+}
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favorites: string[] = [];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
@@ -20,6 +23,11 @@ export class AppComponent {
   }
 
   selectAsFavourite(name: string) {
-    this.favorite = name;
+    this.favorites.push(name);
+  }
+
+  removeFavoritePerson(person:string){
+    this.favorites = this.favorites.filter((item: string) => item !== person);
+    console.log(this.favorites);
   }
 }
