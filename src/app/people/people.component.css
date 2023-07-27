@@ -1,0 +1,12 @@
+.person {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  border: 1px solid pink;
+  padding: 2em;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+}

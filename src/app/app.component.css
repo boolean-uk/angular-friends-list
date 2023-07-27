@@ -8,10 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2em;
 }
 
 .people {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 0.2em;
+
+  align-items: center;
+  justify-content: center;
 }
