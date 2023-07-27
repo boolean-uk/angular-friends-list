@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-people',
@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class PeopleComponent {
   @Input() person: string = ''
+  @Output() favouriteChecked: EventEmitter<string> = new EventEmitter()
+
+  clicked() {
+    this.favouriteChecked.emit(this.person);
+  }
 }
