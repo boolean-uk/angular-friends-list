@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-removeFavorite(_t13: string) {
-throw new Error('Method not implemented.');
-}
+  removeFavorite(_t13: string) {
+    throw new Error('Method not implemented.');
+  }
   newFriend: string | null = null;
   favorites: string[] = [];
 
@@ -26,7 +26,7 @@ throw new Error('Method not implemented.');
     this.favorites.push(name);
   }
 
-  removeFavoritePerson(person:string){
+  removeFavoritePerson(person: string) {
     this.favorites = this.favorites.filter((item: string) => item !== person);
     console.log(this.favorites);
   }

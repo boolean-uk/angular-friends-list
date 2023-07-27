@@ -13,11 +13,9 @@
   </ul>
 </div>
 <div class="people">
-  <ul>
-    <app-people
-      *ngFor="let name of people"
-      [name]="name"
-      (selectAsFavourite)="selectAsFavourite($event)"
-    />
-  </ul>
+  <app-people
+    *ngFor="let name of people"
+    [name]="name"
+    (selectAsFavourite)="selectAsFavourite($event)"
+  />
 </div>
