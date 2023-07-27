@@ -1,0 +1,8 @@
+.person{
+  width: 150px;
+  padding: 10px;
+  border: solid black 1px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
