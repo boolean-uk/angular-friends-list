@@ -8,8 +8,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class PeopleComponent {
   @Input('person') person: string | null = null;
   @Output('addToFavourite') addToFavourite = new EventEmitter();
+  @Output('removeFromFavourites') removeFromFavourites = new EventEmitter();
 
-  clicked() {
+  clickedFavourite() {
     this.addToFavourite.emit(this.person);
+  }
+
+  clickedRemove() {
+    this.removeFromFavourites.emit(this.person);
   }
 }
