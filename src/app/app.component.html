@@ -1,16 +1,23 @@
 <body>
-<h1>Friends list</h1>
-<div class="add-friend">
-  <input  class = "custom-input"type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
-  <button class="custom-button" (click)="addFriend()">Add friend</button>
-</div>
-<div class="favorite">
-  <h2>My favorite person is: {{ favorite }}</h2>
-</div>
-<div class="people">
-  
-    <app-list-people *ngFor="let friend of people" [friend]="friend"
-    (becomeFav)="becomeFav($event)"></app-list-people>
-    
-</div>
+  <h1>Friends list</h1>
+  <div class="add-friend">
+    <input class="custom-input" type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
+    <button class="custom-button" (click)="addFriend()">Add friend</button>
+  </div>
+  <div *ngIf=" favorite.length>0" class="people">
+    <h2>My favorite friends:</h2>
+  </div>
+  <div class="people">
+
+    <app-list-favs *ngFor="let friend of favorite" [friend]="friend" (deleteFav)="deleteFav($event)"></app-list-favs>
+
+  </div>
+  <div class="people">
+    <h2>My friends:</h2>
+  </div>
+
+  <div class="people">
+    <app-list-people *ngFor="let friend of people" [friend]="friend" (becomeFav)="becomeFav($event)"></app-list-people>
+
+  </div>
 </body>

@@ -1,5 +1,5 @@
 .container {
-  border: 2px solid #1c1a2e;
+  border: 2px solid #cfbe24;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@
 }
 
 .custom-button:hover {
-  background-color: #0da126;
+  background-color: #a10d0d;
 }
 
 .custom-button:focus {
