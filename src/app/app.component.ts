@@ -23,7 +23,8 @@ throw new Error('Method not implemented.');
   }
 
   selectAsFavourite(name: string) {
-    this.favorites.push(name);
+    if (!this.favorites.includes(name)){this.favorites.push(name);
+    } 
   }
 
   removeFavoritePerson(person:string){
