@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5em;
-    background-color: rgb(230, 229, 235);
-    border: 2px solid #ccc;
+    background: rgb(228,116,141);
+    background: linear-gradient(90deg, rgba(228,116,141,1) 0%, rgba(217,154,222,1) 50%, rgba(183,243,255,1) 100%);
+    border: 2px solid #1d1629;
     border-radius: 3px;
   }
