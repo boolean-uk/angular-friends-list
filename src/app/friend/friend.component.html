@@ -1,0 +1,12 @@
+<ul>
+    <li class="friend "*ngIf="friend">
+        <p class="text">
+            {{ friend }}
+        </p>
+        <div>
+            <button [class]="isClicked ? 'button' : 'button_clicked'" (click)="addToFavoritesClicked()">
+                {{isClicked ? 'Remove from favorites' : 'Add to favorites'}}
+            </button>
+        </div>
+    </li>
+</ul>
