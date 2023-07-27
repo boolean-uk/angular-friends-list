@@ -23,6 +23,7 @@ export class AppComponent {
   }
 
   OnsetFavorite(person: string) {
+    if(this.favorites.includes(person)) return
     this.favorites.push(person)
   }
 
