@@ -10,12 +10,23 @@ export class AppComponent {
   favorite: string | null = null;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favorites: string[] = [];
+
+  addToFavorite(person: string) {
+    this.favorite = person;
+    if (!this.favorites.includes(this.favorite)) {
+      this.favorites.push(this.favorite)
+    }
+  }
+
+  removeFromFavorite(person: string) {
+    this.favorites = this.favorites.filter(p => p !== person);
+  }
 
   addFriend() {
-    if (!this.newFriend) {
-      return;
+    if (this.newFriend) {
+      this.people.push(this.newFriend);
+      this.newFriend = null;
     }
-    this.people.push(this.newFriend);
-    this.newFriend = null;
   }
 }
