@@ -2,8 +2,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-people',
-  templateUrl: '../../../template/template.html',
-  styleUrls: ['../../../template/template.css']
+  templateUrl: './template.html',
+  styleUrls: ['./template.css']
 })
 export class PeopleComponent {
   @Input() person: string | undefined = undefined;
