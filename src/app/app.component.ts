@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import Person, {createPerson} from "../types/Person";
 
 @Component({
   selector: 'app-root',
@@ -6,20 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  newFriend: string | null = null;
-  favorite: string | null = null;
-
-  people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  newFriendName: string | null = null
+  favorites: Person[] = [];
+  people: Person[] = [];
 
   addFriend() {
-    if (!this.newFriend) {
+    if (!this.newFriendName) {
       return;
     }
-    this.people.push(this.newFriend);
-    this.newFriend = null;
+    const newFriend = createPerson(this.newFriendName)
+    this.people.push(newFriend);
+    this.newFriendName = null;
   }
 
-  selectFavorite(person: string | null) {
-    this.favorite = person
+  addFavorite(person: Person) {
+    person.isFav = true
+    this.favorites.push(person)
+  }
+
+  removeFavorite(person: Person) {
+    person.isFav = false;
+    const idx = this.favorites.indexOf(person);
+    if (idx === -1) return;
+    this.favorites.splice(idx, 1);
   }
 }

@@ -1,6 +1,17 @@
 <li *ngIf="person">
-  {{ person }}
-  <button (click)="onClick()">
-    Select as favorite
+  {{ person.name }}
+
+  <button
+    (click)="onClick()"
+    *ngIf="!person.isFav"
+  >
+    Add to favorites
+  </button>
+
+  <button
+    (click)="onClick()"
+    *ngIf="person.isFav"
+  >
+    Remove from favorites
   </button>
 </li>
