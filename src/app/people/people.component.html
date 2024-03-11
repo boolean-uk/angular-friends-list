@@ -1,0 +1,8 @@
+<div *ngFor="let person of people; index as i">
+    <div style="width: 100%; height: 100%;">
+        <p>{{person}}</p>
+        <button *ngIf="!isFavorite(person)" (click)="favoriteFriend(person)">Make Favorite</button>
+        <button *ngIf="isFavorite(person)" (click)="unfavoriteFriend(person)">Undo Favorite</button>
+        <button (click)="removeFriend(person)">Remove Friend</button>
+    </div>
+</div>
