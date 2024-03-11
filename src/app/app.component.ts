@@ -11,6 +11,10 @@ export class AppComponent {
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
+  setFavorite(favorite: string) {
+    this.favorite = favorite;
+  }
+
   addFriend() {
     if (!this.newFriend) {
       return;
