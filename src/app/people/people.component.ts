@@ -11,6 +11,7 @@ export class PeopleComponent {
   addFriend() {
     if (this.newFriend) {
       this.giveName.emit(this.newFriend);
+      this.newFriend = null;
     }
   }
 }

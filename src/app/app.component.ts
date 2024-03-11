@@ -6,15 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  
   favorite: string | null = null;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
   favorites: string[] = [];
 
   handleAddFriend(newFriend: string) {
-    if (newFriend) {
+    if (newFriend && !this.people.includes(newFriend)) {
       this.people.push(newFriend);
+    } else {
+      alert('Name already exists');
     }
   }
   setFavorite(friend: string) {
