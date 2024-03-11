@@ -3,6 +3,7 @@
   <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
   <button (click)="addFriend()">Add friend</button>
 </div>
+
 <div class="favorite">
   <p>My favorite person(s) is/are:</p>
   <ul>
@@ -10,8 +11,11 @@
   </ul>
 </div>
 <div class="people">
-  <div *ngFor="let person of people" class="person">
-    {{ person }}<button (click)="markAsFavorite(person)">Favorite</button>
-    <button (click)="deleteAsFavorite(person)">Remove Favorite</button>
-  </div>
+  <app-people
+    *ngFor="let person of people"
+    [person]="person"
+    (favoriteClicked)="markAsFavorite($event)"
+    (removeFavoriteClicked)="deleteAsFavorite($event)"
+  >
+  </app-people>
 </div>
