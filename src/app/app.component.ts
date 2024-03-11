@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // Declaring variables:
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favorite: string[] = [];
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
-
+  
   //  Declaring functions:
   addFriend() {
     if (!this.newFriend) {
@@ -20,8 +20,17 @@ export class AppComponent {
     this.people.push(this.newFriend);
     this.newFriend = null;
   }
-
+  
   setFavorite(p: string) {
-    this.favorite = p;
+    if (!this.favorite.includes(p)){
+      this.favorite.push(p)
+      console.log(this.favorite);
+    }
+    
   }
+
+  removeFavorite(p: string) {
+    this.favorite = this.favorite.filter( (person) => person !== p);
+  }
+
 }

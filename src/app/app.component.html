@@ -9,7 +9,13 @@
   <div class="poeple-container">
     <div class="favorite">
       <h2>My favorite person is: </h2>
-      <h2>{{ favorite }}</h2>
+      <ul class="favorite-list">
+        <li *ngFor="let p of favorite"> {{ p }}
+          <button (click)="removeFavorite(this.p)"> Add this person to fav </button>
+        </li>
+      
+
+      </ul>
     </div>
     <div class="people">
       <h2> Here is the list of people</h2>
