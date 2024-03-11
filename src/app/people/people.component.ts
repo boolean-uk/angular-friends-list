@@ -10,10 +10,9 @@ export class PeopleComponent {
   @Input() favorites: string[] = [];
 
   addFavorite(friend: string) {
+    if (this.favorites.includes(friend)) {
+      return;
+    }
     this.favorites.push(friend);
-  }
-
-  removeFavorite(friend: string) {
-    this.favorites = this.favorites.filter((f) => f !== friend);
   }
 }
