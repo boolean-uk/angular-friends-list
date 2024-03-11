@@ -5,8 +5,16 @@
 </div>
 <p>My favorite peoples:</p>
 <div *ngFor="let favorite of favorites" class="favorite">
-  <p>{{ favorite }}</p>
-  <button (click)="removeFavorite(favorite)">Remove favorite</button>
+  <table>
+    <tr>
+      {{
+        favorite
+      }}
+    </tr>
+  </table>
+  <button class="button" (click)="removeFavorite(favorite)">
+    Remove favorite
+  </button>
 </div>
 <div class="people">
   <!-- Add your people component here -->
@@ -16,4 +24,3 @@
     [name]="people"
   ></app-people>
 </div>
-<p>Under</p>

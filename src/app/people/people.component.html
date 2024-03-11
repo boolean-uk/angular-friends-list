@@ -1,2 +1,6 @@
-<p *ngIf="name">{{ name }}</p>
+<table *ngIf="name">
+  <tr>
+    <td>{{ name }}</td>
+  </tr>
+</table>
 <button (click)="addFavorite(name)">Add favorite</button>
