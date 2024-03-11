@@ -3,14 +3,15 @@
   <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
   <button (click)="addFriend()">Add friend</button>
 </div>
-<div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+<div class="favorite" >
+  <p>My favorite people are: {{ favorites?.toString() }}</p>
 </div>
 <div class="people">
   <!-- Add your people component here -->
   <app-people 
     *ngFor="let p of people"
     [person]="p"
-    (favoritePerson)="favoritePerson($event)"
+    (favoritePerson)="addToFavorites($event)"
+    (removeFromFavoritesPerson)="removeFromFavorites($event)"
     ></app-people>
 </div>
