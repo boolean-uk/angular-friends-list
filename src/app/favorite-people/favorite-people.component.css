@@ -1,0 +1,12 @@
+button {
+    background: none;
+    border: none;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+img {
+    width: 15px;
+}
