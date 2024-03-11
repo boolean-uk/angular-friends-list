@@ -19,14 +19,6 @@ export class AppComponent {
     this.newFriend = null;
   }
 
-  favoriteFriend(name: string) {
-    if (!this.favorites.includes(name)) this.favorites.push(name);
-  }
-
-  unfavoriteFriend(name: string) {
-    if(this.favorites.includes(name)) this.favorites.splice(this.favorites.indexOf(name, 0), 1);
-  }
-
   deleteFriend(name: string) {
     if(this.people.includes(name)) this.people.splice(this.people.indexOf(name, 0), 1);
     if(this.favorites.includes(name)) this.favorites.splice(this.favorites.indexOf(name, 0), 1);
