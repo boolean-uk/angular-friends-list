@@ -1,4 +1,4 @@
-<div>
+<div *ngFor="let friend of friends">
     <h1>{{ friend }}</h1>
     <button (click)="peopleVote(this.friend!)">My Favourite</button>
 </div>

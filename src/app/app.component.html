@@ -9,12 +9,11 @@
 </div>
 
 <div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+  <p>My favorite people are: {{ favorites.join(', ') }}</p>
 </div>
 <div class="people">
   <app-people
-  *ngFor="let p of people"
-  [friend]="p"
+  [friends]="people"
   (votePeople)="votePeople($event)">
 </app-people>
 </div>

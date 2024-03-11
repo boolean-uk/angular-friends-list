@@ -13,13 +13,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favorites: string[]=[];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
-  votePeople(n: string) {
-    this.favorite = n
-    console.log(this.favorite)
+  votePeople(friend: string) {
+    if (!this.favorites.includes(friend)) {
+      this.favorites.push(friend)
+    }
+    console.log(this.favorites)
   }
 
   addFriend() {
