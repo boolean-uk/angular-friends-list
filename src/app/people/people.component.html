@@ -1,2 +1,3 @@
 <p>{{ name }}</p>
-<button (click)="setFavourite()">favourite</button>
+<button *ngIf="show" (click)="setFavourite()">favourite</button>
+<button *ngIf="!show" (click)="unsetFavourite()">remove</button>
