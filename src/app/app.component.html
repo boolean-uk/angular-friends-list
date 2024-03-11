@@ -1,11 +1,27 @@
 <h1>Friends list</h1>
-<div class="add-friend">
-  <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
-  <button (click)="addFriend()">Add friend</button>
-</div>
-<div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
-</div>
-<div class="people">
-  <!-- Add your people component here -->
+<div class="friends-container">
+
+  <div class="add-friend">
+    <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
+    <button (click)="addFriend()">Add friend</button>
+  </div>
+  
+  <div class="poeple-container">
+    <div class="favorite">
+      <h2>My favorite person is: </h2>
+      <h2>{{ favorite }}</h2>
+    </div>
+    <div class="people">
+      <h2> Here is the list of people</h2>
+      <!-- This is find on "selector.." -->
+      <ul class="people-list">
+        <app-people 
+        *ngFor="let p of people"
+        [person] ='p'
+        (favPersonEmitter)="setFavorite($event)"> 
+        </app-people>
+      </ul>
+    </div>
+  </div>
+
 </div>
