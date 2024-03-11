@@ -1,8 +1,5 @@
 <h1>Friends list</h1>
-<div class="add-friend">
-  <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
-  <button (click)="addFriend()">Add friend</button>
-</div>
+<app-people (giveName)="handleAddFriend($event)"></app-people>
 <div class="favorite">
   <p>My favorite people are:</p>
 </div>

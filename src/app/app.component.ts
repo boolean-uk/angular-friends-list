@@ -6,18 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  newFriend: string | null = null;
+  
   favorite: string | null = null;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
   favorites: string[] = [];
 
-  addFriend() {
-    if (!this.newFriend) {
-      return;
+  handleAddFriend(newFriend: string) {
+    if (newFriend) {
+      this.people.push(newFriend);
     }
-    this.people.push(this.newFriend);
-    this.newFriend = null;
   }
   setFavorite(friend: string) {
     this.favorite = friend;
