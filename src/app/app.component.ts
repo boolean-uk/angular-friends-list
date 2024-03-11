@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PeopleComponent } from './people/people.component';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   newFriend: string | null = null;
   favorite: string | null = null;
+  //I added
+  lastFavoritePerson: string = ""
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
@@ -17,5 +20,10 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  capitalise(person: string) {
+    // game = game.toUpperCase()
+    this.lastFavoritePerson = person
   }
 }

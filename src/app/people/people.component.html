@@ -1,0 +1,9 @@
+<p>{{person}}</p>
+
+<ng-container *ngIf="lastFavurite else elseBlock">
+    <p>Favorite on already</p>
+</ng-container>
+
+<ng-template #elseBlock>
+    <button (click)="favorite.emit(person)">Favorite</button>
+</ng-template>
