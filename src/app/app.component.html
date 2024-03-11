@@ -5,7 +5,7 @@
 </div>
 <div class="favorite">
   <p>My favorite person is: </p>
-  <ul>
+  <ul class="people">
     <li *ngFor="let person of favorites">
       <p>{{ person }}</p>
       <button (click)="removeFavorite(person)">Remove</button>

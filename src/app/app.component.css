@@ -14,4 +14,20 @@
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 0.2em;
+  list-style-type: none;
 }
+
+.people button {
+  cursor: pointer;
+  background-color: green;
+  color: rgb(26, 21, 21);
+  border-radius: 4PX;
+  border:  none;
+  transition: all 150ms ease-in-out;
+}
+
+.people button:hover {
+  scale: 1.1;
+  background-color: red;
+}
+
