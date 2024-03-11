@@ -5,3 +5,12 @@
   border: 1px solid #ddd;
   justify-content: space-between;
 }
+
+.buttons {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.remove-favorite {
+    margin-left: 0.5em;
+}
