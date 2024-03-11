@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 30vw;
+  margin-bottom: 7px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 2px;
+}
