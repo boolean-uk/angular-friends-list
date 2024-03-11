@@ -8,4 +8,9 @@
 </div>
 <div class="people">
   <!-- Add your people component here -->
+  <app-people 
+    *ngFor="let p of people"
+    [person]="p"
+    (favoritePerson)="favoritePerson($event)"
+    ></app-people>
 </div>
