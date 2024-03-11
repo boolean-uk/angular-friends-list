@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   newFriend: string | null = null;
   favorites: string[] = [];
-
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
-
 
   addFriend() {
     if (!this.newFriend) {
@@ -20,14 +18,22 @@ export class AppComponent {
     this.newFriend = '';
   }
 
-  setFavorite(person: string){
-    console.log(person)
+  setFavorite(person: string) {
+    console.log(person);
     const index = this.favorites.indexOf(person);
     if (index === -1) {
       this.favorites.push(person);
     } else {
       this.favorites.splice(index, 1);
     }
-    console.log(this.favorites)
+    console.log(this.favorites);
+  }
+
+  removeFavorite(person: string) {
+    const index = this.favorites.indexOf(person);
+    if (index !== -1) {
+      this.favorites.splice(index, 1);
+    }
+    console.log(this.favorites);
   }
 }

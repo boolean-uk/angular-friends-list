@@ -7,6 +7,7 @@
   <div> My favourite people are:
     <div *ngFor="let fav of favorites">
       <p> {{ fav }}</p>
+      <button (click)="removeFavorite(fav)">Remove</button>
     </div>
   </div>
 </div>
