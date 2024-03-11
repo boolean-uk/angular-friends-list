@@ -1,0 +1,17 @@
+.person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+    border: solid 1px #000;
+    margin-bottom: 1rem;
+}
+
+button {
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+h3 {
+    margin-left: 1rem;
+}
