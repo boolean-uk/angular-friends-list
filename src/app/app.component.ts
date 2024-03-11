@@ -16,6 +16,10 @@ export class AppComponent {
       return;
     }
     this.people.push(this.newFriend);
+    console.log(this.people);
     this.newFriend = null;
+  }
+  setFavorite(person: string) {
+    this.favorite = person;
   }
 }
