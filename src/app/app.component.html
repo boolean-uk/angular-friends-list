@@ -5,7 +5,7 @@
 </div>
 <div class="favorite">
   <p>My favorite person is:</p>
-  <p *ngFor="let person of favorite; index as i"> "{{favorite[i]}}", </p>
+  <p> {{favorite.join(', ')}} </p>
 </div>
 <div class="people">
   <!-- Add your people component here -->
