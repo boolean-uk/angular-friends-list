@@ -1,0 +1,15 @@
+/* people.component.css */
+.favorite-icon {
+  display: inline-block; /* Ensure the icon is displayed inline */
+  cursor: pointer;
+}
+
+.favorite-icon svg {
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+
+.favorite-icon.favorite-active svg {
+  fill: yellow;
+  background-color: yellow;
+}
