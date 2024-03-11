@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import capitalizeName from '../utils/stringUtils';
 
 @Component({
   selector: 'app-favorite-people',
@@ -12,4 +13,6 @@ export class FavoritePeopleComponent {
   signalFavoriteRemoval(n: string) {
     this.removeFavorite.emit(n)
   }
+
+  capitalizeName = capitalizeName
 }

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import capitalizeName from '../utils/stringUtils';
 
 @Component({
   selector: 'app-people',
@@ -12,4 +13,6 @@ export class PeopleComponent {
   favoritePerson(n: string) {
     this.addPersonToFavorite.emit(n)
   }
+
+  capitalizeName = capitalizeName
 }
