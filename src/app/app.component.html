@@ -5,7 +5,32 @@
 </div>
 <div class="favorite">
   <p>My favorite person is: {{ favorite }}</p>
+  <br/>
+
 </div>
+<div>
+  List of favorites: 
+  <div
+  *ngFor="let person of favourites"
+  >
+  {{person}} 
+</div>
+</div>
+
 <div class="people">
   <!-- Add your people component here -->
+
+  <app-people 
+  *ngFor="let person of people"
+  [person]="person"
+  (favourite)="handleFavouriteClicked($event)"
+  (favoriteRemove)="handleFavoriteRemove($event)"
+  >
+  </app-people>
+
+
+  
+ 
+
+
 </div>
