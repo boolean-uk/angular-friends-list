@@ -8,9 +8,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class PeopleComponent {
   @Input() name: string = "";
   @Output() addToFavoriteEvent = new EventEmitter<string>();
+  @Output() removeFromFavoriteEvent = new EventEmitter<string>();
 
   addFavorite() {
     this.addToFavoriteEvent.emit(this.name);
-    console.log("push");
+  }
+
+  removeFavorite() {
+    this.removeFromFavoriteEvent.emit(this.name);
   }
 }

@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
-
+  favorites: string[] = [];
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
   addFriend() {
@@ -20,8 +19,13 @@ export class AppComponent {
   }
 
   addFavorite(name: string) {
-    this.favorite = null;
-    this.favorite = name;
-    console.log("favorite: ", this.favorite);
+    this.favorites.push(name);
+    console.log("favorites added: ", this.favorites);
+  }
+
+  removeFavorite(name: string) {
+    const index = this.favorites.indexOf(name);
+    this.favorites.splice(index, 1);
+    console.log("favorites removed: ", this.favorites);
   }
 }
