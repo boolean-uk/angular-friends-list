@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-people',
@@ -7,12 +7,9 @@ import { Component, Input, Output } from '@angular/core';
 })
 export class PeopleComponent {
   @Input() person:string;
+  @Output() favorite = new EventEmitter();
 
   constructor(){
     this.person = ""
-  }
-  
-  addFavorite(): void {
-    console.log("Clicked");
   }
 }
