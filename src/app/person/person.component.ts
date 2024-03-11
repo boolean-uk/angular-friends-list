@@ -8,8 +8,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class PersonComponent {
   @Input() name: string | undefined = "[no name]"
   @Output() setAsFavorite = new EventEmitter<string>();
+  @Output() delete = new EventEmitter<string>();
 
   onFavorite() : void {
     this.setAsFavorite.emit(this.name);
+  }
+  onDelete() :void {
+    this.delete.emit(this.name)
   }
 }

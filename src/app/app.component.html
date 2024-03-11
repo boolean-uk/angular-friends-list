@@ -8,6 +8,6 @@
 </div>
 <div class="people">
   <ul>
-    <app-person *ngFor="let p of people" [name]="p" (setAsFavorite)="favoriteFriend(p)"/>
+    <app-person *ngFor="let p of people" [name]="p" (setAsFavorite)="favoriteFriend(p)" (delete)="deleteFriend(p)"/>
   </ul>
 </div>

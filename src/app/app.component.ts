@@ -22,4 +22,9 @@ export class AppComponent {
   favoriteFriend(name: string) {
     this.favorite = name;
   }
+
+  deleteFriend(name: string) {
+    this.people.splice(this.people.indexOf(name, 0), 1);
+    if(this.favorite===name) this.favorite = null;
+  }
 }
