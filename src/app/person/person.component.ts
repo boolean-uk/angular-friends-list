@@ -7,9 +7,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PersonComponent {
   @Input() person: string | null = null;
-  @Output() selectFavorite = new EventEmitter<string>();
+  @Input() isFavorite: boolean = false;
+  @Output() favoriteChange = new EventEmitter<{
+    person: string;
+    isFavorite: boolean;
+  }>();
 
   selectAsFavorite() {
-    this.selectFavorite.emit(this.person!);
+    console.log('Favorite button clicked');
+    if (this.person) {
+      this.favoriteChange.emit({
+        person: this.person,
+        isFavorite: !this.isFavorite,
+      });
+    }
   }
 }
