@@ -7,9 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class PeopleComponent {
   @Input() person:string;
+  @Input() inFavoriteList: boolean;
   @Output() favorite = new EventEmitter();
 
   constructor(){
     this.person = ""
+    this.inFavoriteList = false;
   }
 }
