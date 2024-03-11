@@ -8,9 +8,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class PeopleComponent {
   @Input() people: string[]=[];
   @Output() setFavorite = new EventEmitter<string>();
+  @Output() removeFavorite = new EventEmitter<string>();
 
   emitSetFavorite(person: string){
     this.setFavorite.emit(person)
+  }
+  emitRemoveFavorite(person: string) {
+    this.removeFavorite.emit(person);
   }
 
 }

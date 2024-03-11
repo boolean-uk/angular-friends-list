@@ -4,8 +4,8 @@
   <button (click)="addFriend()">Add friend</button>
 </div>
 <div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+  <p>My favorite people are: {{ favorites.join(', ') }}</p>
 </div>
 <div class="people">
-  <app-people [people]="people" (setFavorite)="setFavorite($event)"></app-people>
+  <app-people [people]="people" (setFavorite)="setFavorite($event)" (removeFavorite)="removeFavorite($event)"></app-people>
 </div>
