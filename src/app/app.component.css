@@ -15,3 +15,11 @@
   grid-template-columns: auto auto auto;
   gap: 0.2em;
 }
+
+/* Style for each element within .people grid */
+.people > * {
+  border: 1px solid black; /* Add a border */
+  padding: 0.5em; /* Add padding for spacing */
+  background-color: rgb(207, 206, 206);
+
+}
