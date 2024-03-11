@@ -21,7 +21,6 @@ export class AppComponent {
 
   setFavorite(person: string) {
     if (!person) {
-      console.log("No person")
       return;
     }
     this.favorite.push(person);

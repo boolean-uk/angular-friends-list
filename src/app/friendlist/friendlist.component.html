@@ -1,1 +1,7 @@
-<p>friendlist works!</p>
+<h1>Friend List</h1>
+
+<div>
+  <p>{{person}}</p>
+  <button (click)="setFavorite.emit(person)">Set favorite</button>
+  <button (click)="removeFavorite.emit(person)">Remove favorite</button>
+</div>
