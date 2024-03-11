@@ -1,7 +1,7 @@
-<p>{{person}}</p>
+<h2>{{person}}</h2>
 <ng-container *ngIf="lastVoted; else elseBlock">
-    <p>Voted on alredy</p>
+    <h2>Voted on alredy</h2>
 </ng-container>
 <ng-template #elseBlock>
-    <button (click)="voted.emit(person)">Vote</button>
+    <button (click)="voted.emit(person)">Favorite</button>
 </ng-template>
