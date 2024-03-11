@@ -6,6 +6,6 @@
 <div class="favorite">
   <p>My favorite people are: {{ favorites.join(', ') }}</p>
 </div>
-<div class="people">
-  <app-people [people]="people" (setFavorite)="setFavorite($event)" (removeFavorite)="removeFavorite($event)"></app-people>
+<div>
+  <app-people class="people" [people]="people" (setFavorite)="setFavorite($event)" (removeFavorite)="removeFavorite($event)"></app-people>
 </div>
