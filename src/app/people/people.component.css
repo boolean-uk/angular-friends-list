@@ -1,0 +1,20 @@
+.people-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.btn-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-card > button {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}

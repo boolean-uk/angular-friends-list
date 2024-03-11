@@ -9,13 +9,38 @@ export class AppComponent {
   newFriend: string | null = null;
   favorite: string | null = null;
 
-  people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  peoples: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favoritePeoples: string[] = [];
 
   addFriend() {
     if (!this.newFriend) {
       return;
     }
-    this.people.push(this.newFriend);
+    this.peoples.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  onFavoriteClicked(personName: string): void {
+    if (!personName) {
+      return;
+    }
+
+    if (!this.favoritePeoples.includes(personName)) {
+      this.favoritePeoples.push(personName);
+    } else {
+      console.log('This person is already in he list');
+    }
+  }
+
+  onRemoveClicked(personName: string): void {
+    if (!personName) {
+      return;
+    }
+
+    if (this.favoritePeoples.includes(personName)) {
+      this.favoritePeoples = this.favoritePeoples.filter(
+        (p) => p !== personName
+      );
+    }
   }
 }
