@@ -7,5 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class PeopleComponent {
   @Input() name: string = "";
-  @Output('favourited') favourited = new EventEmitter<string>();
+  @Output('favourite') favourite = new EventEmitter<string>();
+  @Output('unfavourite') unfavourite = new EventEmitter<string>();
+  @Input('isFavourite') isFavourite: boolean = false;
 }

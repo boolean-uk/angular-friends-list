@@ -10,6 +10,9 @@
   <app-people
     *ngFor="let person of people"
     [name]="person"
-    (favourited)="addFavourite($event)"
+    (favourite)="addFavourite($event)"
+    (unfavourite)="removeFavourite($event)"
+    [isFavourite]="favourites.includes(person)"
+
   ></app-people>
 </div>
