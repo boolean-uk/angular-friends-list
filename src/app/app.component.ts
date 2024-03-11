@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  // Variables
   newFriend: string | null = null;
   favorite: string | null = null;
+  lastFavorite: boolean = false;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
@@ -17,5 +19,9 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  addFavorite(person: string) {
+    this.favorite = person;
   }
 }
