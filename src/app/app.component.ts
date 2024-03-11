@@ -26,9 +26,24 @@ export class AppComponent {
   // Method to set a person as a favorite
   setFavorite(n: string){
     this.fav.push(n)
+    this.favorite = this.fav.join(", ");
     console.log(this.fav)
-
   }
 
-  
+  // Method to check if a person is a favorite
+  isFavourite(n: string){
+    if (this.fav.indexOf(n) === -1){
+      return false;
+    }
+    return true;
+  }
+
+  // Method to delete a favorite person
+  deleteFavouritePerson(n: string) {
+    const index = this.fav.indexOf(n);
+    if (index !== -1) {
+      this.fav.splice(index, 1);
+      this.favorite = this.fav.join(", ");
+    }
+  }
 }
