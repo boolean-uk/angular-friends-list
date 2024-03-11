@@ -1,0 +1,7 @@
+.friend-item {
+  display: flex;
+  gap: 2rem;
+  border: 1px solid green;
+  border-radius: 1rem;
+  padding: 1rem;
+}
