@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favorite: string[] = [];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
@@ -17,5 +17,15 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  personFavourite(n: string) {
+    if(!this.favorite.includes(n)){
+      this.favorite.push(n);
+    }
+    else{
+      this.favorite = this.favorite.filter(f => f != n)
+    }
+    console.log(this.favorite);
   }
 }
