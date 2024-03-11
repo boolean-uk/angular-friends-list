@@ -10,7 +10,6 @@ export class PeopleComponent {
   @Output() addPersonToFavorite: EventEmitter<string> = new EventEmitter<string>();
 
   favoritePerson(n: string) {
-    console.log(n)
     this.addPersonToFavorite.emit(n)
   }
 }

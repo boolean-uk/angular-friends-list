@@ -8,18 +8,24 @@ import { PeopleComponent } from './people/people.component';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
 
+  favorites: string[] | null = [];
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
-  selectFavorite(n: string) {
-    console.log("My favorite is now " + n)
-    this.favorite = n
+  selectFavorites(n: string) {
+    if (!this.favorites?.includes(n)) {
+      this.favorites?.push(n)
+    }
   }
 
   appendFriend(n: string) {
-    console.log("Adding "+n)
     this.people.push(n)
+  }
+
+  removeFriend(n: string) {
+    if (this.favorites !== null) {
+      this.favorites.splice(this.favorites.indexOf(n), 1)
+    }
   }
 
   addFriend() {
