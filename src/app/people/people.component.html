@@ -1,0 +1,8 @@
+<p>{{person}}</p>
+<ng-container *ngIf="!addedAsFavorite">
+    <button (click)="selected.emit(person)">Add as Favorite</button>
+</ng-container>
+<p></p>
+<ng-container *ngIf="addedAsFavorite">
+    <button (click)="toRemove.emit(person)">Remove as Favorite</button>
+</ng-container>
