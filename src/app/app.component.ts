@@ -9,7 +9,7 @@ export class AppComponent {
   newFriend: string | null = null;
   favorite: string | null = null;
 
-  people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  people: string[] = ['lewis', 'jules', 'edvart', 'nathan', 'dave', 'nigel'];
 
   addFriend() {
     if (!this.newFriend) {
@@ -17,5 +17,8 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+  setFavorite(person:string){
+    this.favorite = person
   }
 }
