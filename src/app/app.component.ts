@@ -19,6 +19,10 @@ export class AppComponent {
     this.newFriend = null;
   }
   setFavorite(person: string) {
-    this.favorite = person;
+    if (this.favorite === null) {
+      this.favorite = person;
+    } else {
+      this.favorite = this.favorite + ', ' + person;
+    }
   }
 }
