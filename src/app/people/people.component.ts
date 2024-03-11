@@ -12,4 +12,8 @@ export class PeopleComponent {
   addFavorite(friend: string) {
     this.favorites.push(friend);
   }
+
+  removeFavorite(friend: string) {
+    this.favorites = this.favorites.filter((f) => f !== friend);
+  }
 }

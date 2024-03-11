@@ -18,4 +18,8 @@ export class AppComponent {
     this.peoples.push(this.newFriend);
     this.newFriend = null;
   }
+
+  removeFavorite(friend: string) {
+    this.favorites = this.favorites.filter((f) => f !== friend);
+  }
 }
