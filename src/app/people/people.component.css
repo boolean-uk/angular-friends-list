@@ -1,0 +1,26 @@
+.personContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.name {
+  color: rgb(32, 67, 87);
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.favouriteButton {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+
+.favouriteButton:hover {
+  background-color: rgb(32, 67, 87);
+  color: white;
+  cursor: pointer;
+}
