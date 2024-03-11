@@ -2,9 +2,11 @@
 .person {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Optional: Add some spacing between each person */
-  }
-  
-  .person p {
-    margin-right: 10px; /* Optional: Add some spacing between text and buttons */
-  }
+    margin-bottom: 10px;
+    /* Optional: Add some spacing between each person */
+}
+
+.person p {
+    margin-right: 10px;
+    /* Optional: Add some spacing between text and buttons */
+}

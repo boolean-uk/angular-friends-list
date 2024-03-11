@@ -6,11 +6,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent {
-  @Input() people: string[]=[];
+  @Input() people: string[] = [];
   @Output() setFavorite = new EventEmitter<string>();
   @Output() removeFavorite = new EventEmitter<string>();
 
-  emitSetFavorite(person: string){
+  emitSetFavorite(person: string) {
     this.setFavorite.emit(person)
   }
   emitRemoveFavorite(person: string) {

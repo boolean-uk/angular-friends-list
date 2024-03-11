@@ -18,7 +18,7 @@ export class AppComponent {
     this.people.push(this.newFriend);
     this.newFriend = null;
   }
-  setFavorite(person:string){
+  setFavorite(person: string) {
     if (!this.favorites.includes(person)) {
       this.favorites.push(person);
     }
