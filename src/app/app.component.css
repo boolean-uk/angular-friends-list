@@ -10,8 +10,64 @@
   align-items: center;
 }
 
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
 .people {
+  width: 50%;
+}
+
+.people ul {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 200px 200px 200px;
+  grid-row-gap: 0.5em;
+  list-style-type: none;
+  padding: 0;
+
   gap: 0.2em;
+  justify-content: start;
+}
+.people li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  height: 100px;
+  border-radius: 0.5em;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 0.5em #ccc;
+}
+.favoritePeople {
+  width: 50%;
+}
+
+.favoritePeople ul {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-row-gap: 0.5em;
+  list-style-type: none;
+  padding: 0;
+
+  gap: 0.2em;
+  justify-content: left;
+}
+
+.favoritePeople li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  height: 100px;
+  border-radius: 0.5em;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 0.5em #ccc;
 }
