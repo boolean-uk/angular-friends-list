@@ -1,0 +1,8 @@
+.person-container {
+    display: flex;
+    color: rgb(57, 60, 67);
+    text-indent: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    justify-content: space-between;
+}
