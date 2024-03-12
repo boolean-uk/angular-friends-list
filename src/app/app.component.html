@@ -7,7 +7,8 @@
   <p>My favorite person is: {{ favorite.join() }}</p>
 </div>
 <div class="people">
-  <app-people *ngFor="let p of people"
+  <app-people 
+  *ngFor="let p of people"
   [person]="p"
   (favouritePerson)="favouritePerson($event)"
   ></app-people>
