@@ -8,9 +8,9 @@ import { PeopleComponent } from './people/people.component';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
+  // favorite: string | null = null;
   //I added
-  lastFavoritePerson: string = ""
+  lastFavoritePerson: string[] = []
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
@@ -22,8 +22,12 @@ export class AppComponent {
     this.newFriend = null;
   }
 
-  capitalise(person: string) {
-    // game = game.toUpperCase()
-    this.lastFavoritePerson = person
+  toggleFavorite(person: string) {
+    const index = this.lastFavoritePerson.indexOf(person);
+    if (index !== -1) {
+      this.lastFavoritePerson.splice(index, 1);
+    } else {
+      this.lastFavoritePerson.push(person);
+    }
   }
 }

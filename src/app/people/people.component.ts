@@ -9,5 +9,5 @@ export class PeopleComponent {
   @Input("person")  person: string = "Noah";
   @Output('favorite') favorite = new EventEmitter<string>();
   
-  @Input('lastFavorite') lastFavurite: boolean = false
+  @Input('lastFavorite') lastFavorite: boolean = false
 }
