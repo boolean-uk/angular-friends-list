@@ -15,3 +15,21 @@
   grid-template-columns: auto auto auto;
   gap: 0.2em;
 }
+
+.favorite-button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 4px 2px;
+  cursor: pointer;
+  border:none;
+  border-radius: 2px;
+}
+
+.remove-button {
+  background-color: #f44336;
+  color: white;
+  margin: 4px 2px;
+  cursor: pointer;
+  border:none;
+  border-radius: 2px;
+}
