@@ -8,4 +8,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class PeopleComponent {
   @Input('person') person: string = ""
   @Output('favorite') favorite = new EventEmitter<string>()
+  @Output('removeFavorite') removeFavorite = new EventEmitter<string>()
+  @Input('isFavorite') isFavorite: boolean = false;
 }
