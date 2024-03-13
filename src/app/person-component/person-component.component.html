@@ -1,0 +1,10 @@
+<div>
+  <p>{{ name }}</p>
+
+  <button *ngIf="!containsName" (click)="addToFavorite()">
+    set as favorite
+  </button>
+  <button *ngIf="containsName" (click)="removeFromFavorites()">
+    remove from favorites
+  </button>
+</div>
