@@ -1,0 +1,13 @@
+<div class="add-friend">
+    <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
+    <button (click)="addFriend()">Add friend</button>
+  </div>
+  
+  <ul>
+    <li *ngFor="let person of people">
+      {{ person }} 
+      <button *ngIf="favorites.indexOf(person) === -1" (click)="addFavorite(person)">Favorite</button>
+      <button *ngIf="favorites.indexOf(person) !== -1" (click)="removeFavorite(person)">Remove</button>
+    </li>
+  </ul>
+  

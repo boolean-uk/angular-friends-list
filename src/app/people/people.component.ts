@@ -1,21 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-people',
+  templateUrl: './people.component.html',
+  styleUrls: ['./people.component.css']
 })
-export class AppComponent {
-  newFriend: string | null = null;
-  favorites: string[] = [];
+export class PeopleComponent {
+  @Input() favorites: string[] = [];
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  newFriend: string | null = null;
+
+  constructor() { }
 
   addFriend() {
-    if (!this.newFriend) {
-      return;
+    if (this.newFriend) {
+      this.people.push(this.newFriend);
+      this.newFriend = null;
     }
-    this.people.push(this.newFriend);
-    this.newFriend = null;
   }
 
   addFavorite(person: string) {
