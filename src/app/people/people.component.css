@@ -1,0 +1,11 @@
+.buttons {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    border: 1px solid black; /* Add a border */
+    padding: 0.5em; /* Add padding */
+  }
+
+  .buttons button {
+    flex-grow: 1; /* Allow buttons to grow to fill available space */
+  }
