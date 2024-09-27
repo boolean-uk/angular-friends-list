@@ -15,3 +15,7 @@
   grid-template-columns: auto auto auto;
   gap: 0.2em;
 }
+
+.favoritePeople {
+  display: flex;
+}

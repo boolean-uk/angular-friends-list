@@ -1,0 +1,35 @@
+.friend {
+    border: 1px solid #ccc;
+    width: 500px;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.button {
+    margin-right: 5.5px;
+    height: 40px;
+    width: 150px;
+    border-radius: 12px;
+    font-size: 15px;
+    background-color: #c28287; 
+    color: white;
+}
+
+.button_clicked {
+    background-color: #82c295; 
+    color: white;
+    margin-right: 5.5px;
+    height: 40px;
+    width: 150px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+  
