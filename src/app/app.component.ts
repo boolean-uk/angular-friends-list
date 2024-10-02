@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +11,7 @@ export class AppComponent {
   favorite: string | null = null;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favoritePeople: string[] = [];
 
   addFriend() {
     if (!this.newFriend) {
@@ -17,5 +19,14 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  setFavoritePerson(person: string) {
+    if (this.favoritePeople.includes(person)) {
+      this.favoritePeople.splice(this.favoritePeople.indexOf(person), 1);
+    }
+    else  {
+      this.favoritePeople.push(person)
+    }
   }
 }
