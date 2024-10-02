@@ -1,0 +1,9 @@
+<p>{{name}}</p>
+
+<ng-container *ngIf="!isFavourite; else elseBlock">
+    <button (click)="favourite.emit(name)">Favourite</button>
+</ng-container>
+
+<ng-template #elseBlock>
+    <button (click)="unfavourite.emit(name)">Remove Favourite</button>
+</ng-template>
