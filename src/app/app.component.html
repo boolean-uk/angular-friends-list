@@ -13,6 +13,8 @@
   *ngFor="let p of people "
   [name]="p"
   (favourite)="addFavourite($event)"
+  (removeFavourite)="removeFavourite($event)"
+
   ></app-people>
 
 

@@ -25,5 +25,13 @@ export class AppComponent {
     }
     return;
   }
+
+  removeFavourite(name: string) {
+    if(this.favorite.includes(name)){
+      this.favorite.splice(this.favorite.indexOf(name, 1))
+    }
+    return;
+
+  }
   
 }
