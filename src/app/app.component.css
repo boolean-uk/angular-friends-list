@@ -1,13 +1,5 @@
-:host {
-  box-sizing: border-box;
-  display: block;
-  padding: 0 0.5em;
-}
-
 .favorite {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .people {
