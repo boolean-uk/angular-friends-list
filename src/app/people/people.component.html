@@ -1,0 +1,7 @@
+<div class="person-card" *ngFor="let person of people">
+    <p>{{ person }}</p>
+    <div class="button-section">
+        <button (click)="setAsFavorite(person)">Favorite</button>
+        <button (click)="removeFromFavorite(person)">Remove</button>
+    </div>
+</div>
