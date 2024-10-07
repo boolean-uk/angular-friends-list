@@ -5,13 +5,42 @@
 }
 
 .favorite {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0.2em;
 }
 
 .people {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 0.2em;
+}
+
+.add-friend, .favorite, .people {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.favorite li, .people li {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+button {
+  background-color: #82bbf8;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4e9ef3;
 }
