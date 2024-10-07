@@ -1,14 +1,19 @@
 <main>
   <h1>Favorite person selector</h1>
   <div class="favorite">
+    <!--  
     <p>My favorite person is: {{ favorite }}</p>
+    -->
+    <p>My favorite people are:</p>
+    <div *ngFor="let x of favoritePeople">{{ x }}></div>
   </div>
   <div class="people">
     <app-person
       *ngFor="let person of people"
       [person]="person"
-      (voted)="setFavourite($event)"
-      [lastVoted]="person === favorite"
+      (setAsFavorite)="addFriend($event)"
+      (removeAsFavorite)="removeFriend($event)"
+      [isFavorite] = "favoritePeople.includes(person)"
     >
     </app-person>
   </div>

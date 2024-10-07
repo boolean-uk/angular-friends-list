@@ -6,20 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  newFriend: string | null = null;
   favorite: string | null = null;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favoritePeople: string[] = [];
 
-  addFriend() {
-    if (!this.newFriend) {
-      return;
+  addFriend(friend: string) {
+    this.favoritePeople.push(friend);
+  }
+
+  removeFriend(friend: string) {
+    const ix = this.favoritePeople.indexOf(friend);
+    if (ix !== -1) {
+      this.favoritePeople.splice(ix, 1);
     }
-    this.people.push(this.newFriend);
-    this.newFriend = null;
   }
 
-  setFavourite(gameName: string) {
-    this.favorite = gameName;
-  }
 }

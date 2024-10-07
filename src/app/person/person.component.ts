@@ -8,7 +8,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class PersonComponent {
   @Input('person') person: string = 'Max';
 
-  @Output('voted') voted = new EventEmitter<string>();
+  @Output('setAsFavorite') setAsFavorite = new EventEmitter<string>();
 
-  @Input('lastVoted') lastVoted: boolean = false;
+  @Output('removeAsFavorite') removeAsFavorite = new EventEmitter<string>();
+
+  @Input('isFavorite') isFavorite: boolean = false;
 }
