@@ -4,7 +4,11 @@
   <button (click)="addFriend()">Add friend</button>
 </div>
 <div class="favorite">
-  <p>My favorite person is: {{ favorite.join(", ") }}</p>
+  @if (favorites.length > 1) {
+  <p>My favorite persons are: {{ favorites.join(", ") }}</p>
+  } @else {
+  <p>My favorite person is: {{ favorites.join(", ") }}</p>
+  }
 </div>
 <div class="people">
   <!-- Add your people component here -->
@@ -13,5 +17,6 @@
     [name]="person"
     (favorite)="addFavorite($event)"
     (removeFavorite)="removeFavorite($event)"
+    (unfriend)="removeFriend($event)"
   ></app-people>
 </div>
