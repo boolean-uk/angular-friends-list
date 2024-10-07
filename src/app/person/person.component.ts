@@ -9,4 +9,6 @@ export class PersonComponent {
   @Input('person') person: string | undefined;
 
   @Output('favorite') favorite = new EventEmitter<string>();
+
+  @Input('buttonLabel') buttonLabel: string | undefined;
 }
