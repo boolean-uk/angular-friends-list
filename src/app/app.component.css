@@ -6,13 +6,17 @@
 
 .favorite {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+}
+
+.favoriteNames {
+  padding-left: 0.5rem;
+  border-right: 2px solid #ccc;
+  padding-right: 0.5rem;
 }
 
 .people {
   display: grid;
-  width: 50vw;
   grid-template-columns: auto auto auto;
   gap: 0.2em;
 }
