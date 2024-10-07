@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { PeopleComponent } from './people/people.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   newFriend: string | null = null;
@@ -17,5 +19,9 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  setFavorite(person: string) {
+    this.favorite = person;
   }
 }
