@@ -6,13 +6,18 @@
 </div>
 
 <div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+  <p>My favorite friends are:</p>
+  <app-person
+    *ngFor="let favorite of favorites"
+    [person] = "favorite"
+    (favorite) = "addFavorite($event)"
+  ></app-person>
 </div>
 
 <div class="people">
   <app-person
     *ngFor="let person of people"
     [person] = "person"
-    (favorite) = "setFavorite($event)"
+    (favorite) = "addFavorite($event)"
   ></app-person>
 </div>
