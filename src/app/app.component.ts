@@ -12,10 +12,13 @@ export class AppComponent {
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
   addFriend() {
-    if (!this.newFriend) {
-      return;
-    }
+    if (!this.newFriend) return;
+
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  setFavorite(friend: string) {
+    this.favorite = friend;
   }
 }

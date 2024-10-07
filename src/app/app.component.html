@@ -10,7 +10,9 @@
 </div>
 
 <div class="people">
-  @for (person of people; track person) {
-    <p>{{ person }}</p>
-  }
+  <app-person
+    *ngFor="let person of people"
+    [person] = "person"
+    (favorite) = "setFavorite($event)"
+  ></app-person>
 </div>
