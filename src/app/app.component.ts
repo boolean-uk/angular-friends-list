@@ -25,9 +25,9 @@ export class AppComponent {
     }
   }
 
-  removeFriendFromFavorite(frind : string) {
-    if (this.favorite.includes(frind)) {
-      this.favorite.splice(this.favorite.indexOf(frind), 1)
+  removeFriendFromFavorite(friend: string) {
+    if (this.favorite.includes(friend)) {
+      this.favorite.splice(this.favorite.indexOf(friend), 1);
     }
   }
 }
