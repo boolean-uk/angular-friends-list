@@ -18,4 +18,11 @@ export class AppComponent {
     this.people.push(this.newFriend);
     this.newFriend = null;
   }
+
+  setFavorite(person : string) {
+    if (person != this.favorite){
+      this.favorite = person;
+    }
+  }
+  
 }

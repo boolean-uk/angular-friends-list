@@ -1,0 +1,14 @@
+:host {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0.5em;
+    align-items: center;
+}
+
+p {
+    padding-right: 20px;
+}
+
+button {
+    height: 20px;
+}
