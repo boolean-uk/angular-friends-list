@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <h1>Friends list</h1>
 <div class="add-friend">
   <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
@@ -8,4 +9,5 @@
 </div>
 <div class="people">
   <!-- Add your people component here -->
+   <app-people *ngFor="let person of people" [name]="person" (favorite)="favorite = $event"></app-people>
 </div>
