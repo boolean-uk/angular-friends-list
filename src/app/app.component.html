@@ -3,6 +3,7 @@
   <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
   <button (click)="addFriend()">Add friend</button>
 </div>
+
 <div class="favorite">
   @if (favorites.length > 1) {
   <p>My favorite persons are: {{ favorites.join(", ") }}</p>
@@ -10,6 +11,7 @@
   <p>My favorite person is: {{ favorites.join(", ") }}</p>
   }
 </div>
+
 <div class="people">
   <!-- Add your people component here -->
   <app-people
