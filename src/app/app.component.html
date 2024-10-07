@@ -4,8 +4,14 @@
   <button (click)="addFriend()">Add friend</button>
 </div>
 <div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+  <p>My favourite friends are:</p>
+  @for (p of favourite; track $index) {
+    <app-favourite-person [name]="p" (remove)="removeFavouriteFriend(p)"/>
+  }
 </div>
 <div class="people">
   <!-- Add your people component here -->
+  @for(p of people; track $index){
+    <app-person [name]="p" (favourite)="favouriteFriend(p)"></app-person>
+  }
 </div>
