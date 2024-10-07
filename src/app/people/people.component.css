@@ -1,0 +1,17 @@
+:host {
+    display: contents;
+}
+
+.person-card {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-section {
+    display: flex;
+    gap: 0.5rem;
+}
+
