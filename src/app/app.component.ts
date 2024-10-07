@@ -7,9 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favorites: string[] = [];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+
+  addFavorite(name:string) {
+    if (!name) {
+      return;
+    }
+    this.favorites.push(name)
+    console.log(this.favorites)
+  }
 
   addFriend() {
     if (!this.newFriend) {
