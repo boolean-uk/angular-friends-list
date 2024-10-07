@@ -10,6 +10,7 @@ export class AppComponent {
   favorite: string | null = null;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favourite: string[] = [];
 
   addFriend() {
     if (!this.newFriend) {
@@ -17,5 +18,18 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  addToFavourites(name: string) {
+    if (!this.favourite.includes(name)) {
+      this.favourite.push(name);
+    }
+  }
+
+  removeFavourites(name: string) {
+    if (this.favourite.includes(name)) {
+      const index = this.favourite.indexOf(name);
+      this.favourite.splice(index)
+    }
   }
 }
