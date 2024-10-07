@@ -7,15 +7,31 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
-
-  people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favorites: string[] = [];
+  friends: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
   addFriend() {
     if (!this.newFriend) {
       return;
     }
-    this.people.push(this.newFriend);
+    this.friends.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  addFavorites(person: string) {
+    if (this.favorites.includes(person)) {
+      return;
+    }
+
+    this.favorites.push(person)
+  }
+
+  removeFavorite(person: string) {
+    if (!this.favorites.includes(person)) {
+      return;
+    }
+    
+    let index = this.favorites.indexOf(person);
+    this.favorites.splice(index, 1)
   }
 }
