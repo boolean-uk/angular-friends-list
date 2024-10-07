@@ -2,4 +2,5 @@
     {{ name }}
 </p>
 <button *ngIf="name" (click)="favorites.emit(name)">Favourite</button>
+<button *ngIf="name" (click)="removeFavorite.emit(name)">Remove</button>
 <hr />

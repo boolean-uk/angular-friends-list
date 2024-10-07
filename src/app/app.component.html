@@ -16,5 +16,6 @@
     *ngFor="let person of people"
     [name]="person"
     (favorites)="addFavorite($event)"
+    (removeFavorite)="removeFavorite($event)"
   ></app-people>
 </div>
