@@ -1,0 +1,9 @@
+.person {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    background-color: #f4f4f4;
+    margin: 0.2em;
+    border-radius: 4px;
+  }
+  
