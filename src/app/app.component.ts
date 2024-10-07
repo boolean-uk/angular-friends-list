@@ -19,6 +19,12 @@ export class AppComponent {
   }
 
   addFavorite(friend: string) {
+    if (this.favorites.includes(friend)) return;
+
     this.favorites.push(friend);
+  }
+
+  removeFavorite(friend: string) {
+    this.favorites = this.favorites.filter((favorite) => favorite !== friend);
   }
 }

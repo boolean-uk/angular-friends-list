@@ -10,7 +10,7 @@
   <app-person
     *ngFor="let favorite of favorites"
     [person] = "favorite"
-    (favorite) = "addFavorite($event)"
+    (favorite) = "removeFavorite($event)"
   ></app-person>
 </div>
 
