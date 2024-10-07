@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favouriteFriends: string[] = [];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
@@ -22,6 +22,12 @@ export class AppComponent {
   }
 
   setFavorite(person: string) {
-    this.favorite = person;
+    if (!this.favouriteFriends.includes(person)) {
+      this.favouriteFriends.push(person);
+    }
+  }
+
+  removeFavourite(person: string) {
+    this.favouriteFriends = this.favouriteFriends.filter((friend) => friend !== person);
   }
 }
