@@ -7,15 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
-
-  people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favorites: string[] = []
+  isFavorite: boolean = false;
+  peoples: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
   addFriend() {
     if (!this.newFriend) {
       return;
     }
-    this.people.push(this.newFriend);
+    this.peoples.push(this.newFriend);
     this.newFriend = null;
   }
+
+  setFavorite(name: string) {
+    this.favorites.push(name);
+  }
+
+  removeFavorite(nameToDelete: string) {
+    this.favorites = this.favorites.filter(name => name !== nameToDelete);
+}
+
 }
