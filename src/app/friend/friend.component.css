@@ -1,0 +1,11 @@
+.friend-name {
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #FFFFF;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    text-align: center;
+  }
