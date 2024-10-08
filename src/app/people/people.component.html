@@ -1,0 +1,9 @@
+<p>Name: {{name}}</p>
+<!-- <button (click)="chosen.emit(name)">Choose</button> -->
+
+<ng-container *ngIf="lastChosen; else elseBlock">
+    <p>Currently chosen</p>
+  </ng-container>
+  <ng-template #elseBlock>
+    <button (click)="chosen.emit(name)">Choose</button>
+  </ng-template>
