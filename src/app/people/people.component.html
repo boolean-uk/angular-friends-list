@@ -1,0 +1,8 @@
+<p>{{people}}</p>
+
+<ng-container *ngIf="lastVoted; else elseBlock">
+    <button (click)="removed.emit(people)">Remove</button>
+</ng-container>
+<ng-template #elseBlock>
+    <button (click)="voted.emit(people)">Vote</button>
+</ng-template>
