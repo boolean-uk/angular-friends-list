@@ -3,13 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   newFriend: string | null = null;
   favorite: string | null = null;
 
-  people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  people: string[] = [
+    'lewis',
+    'jules',
+    'ed', 
+    'nathan', 
+    'dave', 
+    'nigel'];
 
   addFriend() {
     if (!this.newFriend) {
@@ -18,4 +24,8 @@ export class AppComponent {
     this.people.push(this.newFriend);
     this.newFriend = null;
   }
+
+  setFavorite(name: string) {
+    this.favorite = name;
+  } 
 }
