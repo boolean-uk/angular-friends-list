@@ -1,0 +1,3 @@
+<p>{{friend.name}}</p>
+<img *ngIf="friend.isFavorite" src="http://www.clipartbest.com/cliparts/4i9/ogp/4i9ogpM6T.png">
+<button (click)="setFavorite()">{{friend.isFavorite? 'Remove from favorites' : 'Favorite'}}</button>

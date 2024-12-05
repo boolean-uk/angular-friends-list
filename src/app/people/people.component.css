@@ -1,0 +1,20 @@
+:host {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 300px auto auto;
+}
+
+button {
+    width: fit-content;
+    position: relative;
+    margin: 5px 5px 5px auto;
+}
+
+p {
+    margin-left: 10px;
+}
+
+img {
+    width: 50px;
+
+}
