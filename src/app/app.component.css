@@ -4,10 +4,19 @@
   padding: 0 0.5em;
 }
 
+.favorites {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0.2em;
+  border-bottom: 1px solid black;
+}
+
 .favorite {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  justify-content: space-between;
 }
 
 .people {
