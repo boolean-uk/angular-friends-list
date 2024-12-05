@@ -7,9 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favorite: string[] = [];
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+
+  toggleFavorite(friend: string) { 
+      this.favorite.push(friend)
+      
+  }
+
+  removeFavorite(friend: string) {
+    const index = this.favorite.indexOf(friend);
+    if (index !== -1) {
+      this.favorite.splice(index, 1)
+    }
+  }
+
+  capitalise(friends: string[]) {
+    // game = game.toUpperCase();
+     this.favorite
+      = friends.slice();
+   }
 
   addFriend() {
     if (!this.newFriend) {
@@ -18,4 +36,6 @@ export class AppComponent {
     this.people.push(this.newFriend);
     this.newFriend = null;
   }
+
+
 }
