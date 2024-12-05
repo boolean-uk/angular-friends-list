@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  // Variables
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favorite: string[] = [];
+  lastFavorite: boolean = false;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
 
@@ -18,4 +20,17 @@ export class AppComponent {
     this.people.push(this.newFriend);
     this.newFriend = null;
   }
+
+  addFavorite(person: string) {
+    if (this.favorite.includes(person)) {
+      return;
+    } else {
+      this.favorite.push(person);
+    }
+  }
+
+  removeFavorite(person: string) {
+    this.favorite = this.favorite.filter(favoritePerson => favoritePerson !== person);
+  }
+  
 }
