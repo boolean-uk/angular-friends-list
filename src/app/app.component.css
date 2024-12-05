@@ -1,17 +1,72 @@
-:host {
-  box-sizing: border-box;
-  display: block;
-  padding: 0 0.5em;
-}
-
-.favorite {
+/* app.component.css */
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.people {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 0.2em;
+.friends,
+.favorite {
+  flex: 1;
+  padding: 0 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  position: relative; /* Add this line */
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.add-friend {
+  margin-top: 20px;
+}
+
+.add-friend input[type="text"] {
+  padding: 8px;
+  width: 200px;
+}
+
+.add-friend button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-friend button:hover {
+  background-color: #45a049;
+}
+
+.favorite-icon {
+  cursor: pointer;
+  position: absolute; /* Add this line */
+  top: 50%; /* Add this line */
+  transform: translateY(-50%); /* Add this line */
+}
+
+.favorite-icon svg {
+  fill: none;
+  stroke-width: 2;
+  stroke: currentColor;
+}
+
+.favorite-icon.favorite-active svg {
+  fill: yellow;
 }
