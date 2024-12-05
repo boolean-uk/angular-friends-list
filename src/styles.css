@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+/* Center the header and input with submit button */
+h1, .add-friend {
+  display: flex;
+  justify-content: center;
+}
+
+/* Center the table */
+.people {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add some top margin to separate the header and the table */
+}
+
+.add-friend {
+  margin-bottom: 20px; /* Add some bottom margin to separate the input from the table */
+}

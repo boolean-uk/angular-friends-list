@@ -1,0 +1,23 @@
+.people-table {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+.people-table td {
+  border: transparent;
+  padding: 8px;
+  text-align: center;
+}
+
+.people-table button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  width: 100px;
+}

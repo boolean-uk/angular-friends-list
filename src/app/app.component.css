@@ -15,3 +15,24 @@
   grid-template-columns: auto auto auto;
   gap: 0.2em;
 }
+
+.add-friend input {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.add-friend button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  width: 100px;
+}
