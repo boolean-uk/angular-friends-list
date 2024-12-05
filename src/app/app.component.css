@@ -1,4 +1,4 @@
-:host {
+/* :host {
   box-sizing: border-box;
   display: block;
   padding: 0 0.5em;
@@ -14,4 +14,4 @@
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 0.2em;
-}
+} */
