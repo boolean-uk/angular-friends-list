@@ -1,0 +1,26 @@
+<!--
+  <div>
+ 
+    <p>{{ name }}</p>
+    <button (click)="setFavorite(this.name)"> Select as Favorite</button>
+   
+</div>  
+-->
+
+   
+<div class="people">
+    <p>{{ name }}</p>
+
+    <div *ngIf = "isFavourite === true">
+        <button class="deleteButton" (click)="deleteFavouritePerson(this.name)">Delete from favourite</button>
+    </div>
+
+    <div *ngIf = "isFavourite === false">
+        <button class="setFavorite" (click)="setFavorite(this.name)"> Select as Favorite</button>
+    </div>
+
+</div>
+
+
+
+
