@@ -1,0 +1,6 @@
+<li>
+    <p><b>{{name}}</b></p>
+    <button *ngIf="!favorites.includes(name)" (click)="onFavorite()">Favorite</button>
+    <button *ngIf="favorites.includes(name)" (click)="onUnfavorite()">Unfavorite</button>
+    <button (click)="onDelete()">Delete friend</button>
+</li>
