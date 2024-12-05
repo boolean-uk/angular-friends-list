@@ -1,0 +1,5 @@
+<div *ngFor="let person of people" class="person">
+    <p>{{ person }}</p>
+    <button (click)="emitSetFavorite(person)">Set as Favorite</button>
+    <button (click)="emitRemoveFavorite(person)">Remove Favorite</button>
+</div>
