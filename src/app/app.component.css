@@ -15,3 +15,12 @@
   grid-template-columns: auto auto auto;
   gap: 0.2em;
 }
+
+.favorite-person-item {
+  border: 2px solid black;
+  padding:  1rem;
+}
+
+.favorite-list {
+  display: flex;
+}
