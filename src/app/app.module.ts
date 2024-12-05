@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { PeopleComponent } from './people/people.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PeopleComponent, FavoritesComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
