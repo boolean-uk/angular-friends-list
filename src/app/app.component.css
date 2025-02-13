@@ -4,10 +4,16 @@
   padding: 0 0.5em;
 }
 
-.favorite {
-  display: flex;
+.favourite {
+  display: block;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
+}
+
+.favouritePersons {
+  position: relative;
+  top: 315px;
 }
 
 .people {

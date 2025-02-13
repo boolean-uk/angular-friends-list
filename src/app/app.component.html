@@ -2,10 +2,21 @@
 <div class="add-friend">
   <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
   <button (click)="addFriend()">Add friend</button>
+  
 </div>
-<div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+<div class="favourite">
+  <p>My favourites are: </p>
+  <ng-container *ngFor="let person of favourite">
+    {{ person }}
+  </ng-container>
 </div>
 <div class="people">
   <!-- Add your people component here -->
+  <app-people
+    *ngFor="let person of people"
+    [person]="person"
+    (isFavourite)="setFavourite($event)"
+    (isNotFavourite)="removeFromFavourites($event)"
+    [lastFavourited]="favourite.includes(person)"
+  ></app-people>
 </div>
