@@ -1,0 +1,10 @@
+<p>{{name}}</p>
+<button  (click)="toggleFavorite()" >
+    
+    <ng-container *ngIf="!favorite"  >
+        Make Favorite
+    </ng-container>
+    <ng-container *ngIf="favorite"  >
+        Remove Favorite
+    </ng-container>
+</button>
