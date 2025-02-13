@@ -1,0 +1,9 @@
+<h2>Friends</h2>
+@for (person of people; track $index) {
+  <p class="people-card">{{person}}
+    <!-- move this @if out 1 step to only show favorites in favorites list -->
+    @if (!favoritePeople.includes(person)) {
+      <button (click)="favoriteHandler.emit(person)">Favorite</button>
+    }
+  </p>
+}

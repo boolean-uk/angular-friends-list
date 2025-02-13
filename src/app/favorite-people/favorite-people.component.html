@@ -1,0 +1,6 @@
+<h2>Favorite people:</h2>
+@for (person of favoritePeople; track $index) {
+  <p class="people-card">{{person}}
+    <button (click)="removeFavoriteHandler.emit(person)">Remove favorite</button>
+  </p>
+}
