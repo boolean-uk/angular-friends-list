@@ -1,0 +1,15 @@
+li {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: start;
+  text-transform: capitalize;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+}
+
+p {
+  margin: 0.5rem;
+}

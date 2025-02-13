@@ -15,3 +15,14 @@
   grid-template-columns: auto auto auto;
   gap: 0.2em;
 }
+
+li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+p {
+  margin: 0.5rem;
+}
