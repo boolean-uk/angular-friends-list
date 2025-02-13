@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,5 +18,12 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+
+  }
+  addFav(favorite: string): void {
+    console.log(favorite);
+    if (this.favorite !== favorite||favorite === null) {
+      this.favorite = favorite;
+    }
   }
 }
