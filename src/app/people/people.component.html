@@ -1,0 +1,7 @@
+<h2>{{ name }}</h2>
+<div *ngIf="isFavorite === false">
+  <button (click)="toggleFavorite()">Favorite</button>
+</div>
+<div *ngIf="isFavorite === true">
+  <button (click)="toggleFavorite()">Remove Favorite</button>
+</div>
