@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newFriend: string | null = null;
-  favorite: string | null = null;
+  favourites: string[] = []
+
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+
+
 
   addFriend() {
     if (!this.newFriend) {
@@ -17,5 +20,20 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  removeFavourite(personName: string): void{
+    const index: number = this.favourites.indexOf(personName);
+    if(index !== -1){
+      this.favourites.splice(index,1);
+    }
+    console.log(personName);
+    console.log(this.favourites)
+  }
+  
+  setFavourites(personName: string): void{
+    this.favourites.push(personName)
+    console.log(personName);
+    console.log(this.favourites)
   }
 }

@@ -1,0 +1,11 @@
+<p>{{ person }}</p>
+
+<ng-container *ngIf="isFavourite; else elseBlock">
+  <p>Is favourite</p>
+  <button (click)="removed.emit(person)">Remove</button>
+</ng-container>
+
+<ng-template #elseBlock>
+  <button (click)="added.emit(person)">Add</button>
+
+</ng-template>
