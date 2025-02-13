@@ -1,0 +1,4 @@
+<h2>{{ name }}</h2>
+<div *ngIf="!isFavorite">
+    <button (click)="setFavorite(this.name)">Add to Favorites</button>
+</div>
