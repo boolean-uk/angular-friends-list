@@ -1,0 +1,8 @@
+<p>{{ person }}</p>
+
+<ng-container *ngIf="lastVoted; else elseBlock">
+  <p>Currently selected</p>
+</ng-container>
+<ng-template #elseBlock>
+  <button (click)="voted.emit(person)">Vote</button>
+</ng-template>
