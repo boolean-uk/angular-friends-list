@@ -1,0 +1,8 @@
+<p>{{this.myPeople()}}</p>
+
+@if (!this.addFavourite()) {
+<button (click)="this.favorites.emit(this.myPeople())">Add favourite</button>
+} @else {
+    <p>Current selection</p>
+    <button (click)="removeFavourite.emit(myPeople())">Remove favourite</button>
+}
