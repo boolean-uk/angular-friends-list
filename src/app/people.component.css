@@ -1,0 +1,22 @@
+span {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+:host {
+  display: block;
+  margin-bottom: 8px;
+}
