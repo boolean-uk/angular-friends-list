@@ -1,0 +1,21 @@
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+@Component({
+  selector: 'app-people',
+  standalone: false,
+  templateUrl: './people.component.html',
+  styleUrl: './people.component.css',
+})
+export class PeopleComponent {
+  @Input() name: string = '';
+  @Input() isFav: boolean = false;
+  @Output() addFav: EventEmitter<string> = new EventEmitter<string>();
+  @Output() deleteFav: EventEmitter<string> = new EventEmitter<string>();
+
+  setFav(p: string) {
+    this.addFav.emit(p);
+  }
+  removeFav(p: string) {
+    this.deleteFav.emit(p);
+  }
+}

@@ -1,17 +1,132 @@
+/* === Page Styles === */
 :host {
-  box-sizing: border-box;
   display: block;
-  padding: 0 0.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px 20px;
+  background: #37316d;
+  min-height: 100vh;
 }
 
-.favorite {
+/* === Title === */
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #aed7ff;
+  margin-bottom: 30px;
+}
+
+/* === Add Friend Section === */
+.add-friend {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.add-friend input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  width: 240px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.add-friend input:focus {
+  border-color: #4a90e2;
+}
+
+.add-friend button {
+  padding: 10px 16px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-friend button:hover {
+  background-color: #43a047;
+}
+
+/* === Favorite Section === */
+.favorite-section {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.favorite-section h2 {
+  color: #1d1e24;
+}
+
+.favorite-section p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #353343;
+}
+
+.favorite-section em {
+  color: #2c2b32;
+}
+
+.favorite-box {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #80a7bd;
+  border: 2px solid #4a90e2;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.favorite-box h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #112f52;
+}
+
+.favorite-box p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.favorite-box em {
+  color: #08223f;
+}
+
+
+/* === People List === */
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   align-items: center;
 }
 
-.people {
+
+.people-list {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 0.2em;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  .people-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .people-list {
+    grid-template-columns: 1fr;
+  }
 }
