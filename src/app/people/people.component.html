@@ -1,0 +1,8 @@
+<p>{{name()}}</p>
+
+@if (favorites().includes(name())) {
+   <button (click)="remove.emit(name())">remove</button>
+} 
+@else {
+   <button (click)="vote.emit(name())">favorite</button>
+}
