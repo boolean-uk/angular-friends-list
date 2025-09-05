@@ -7,5 +7,12 @@
   <p>My favorite person is: {{ favorite }}</p>
 </div>
 <div class="people">
+  @for (person of people; track person){
+    <app-person
+    [person]="person"
+    (voted)="setFavorite($event)"
+    [lastVoted]="person === favorite"
+    ></app-person>
+  }
   <!-- Add your people component here -->
 </div>
