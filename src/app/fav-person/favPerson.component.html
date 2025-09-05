@@ -1,0 +1,6 @@
+<div class="fav-person">
+    <h3>{{ name }}</h3>
+    <div *ngIf="isFav === true">
+    <button (click)="deleteFromFavs(this.name)">Delete Fav</button>
+    </div>
+</div>
