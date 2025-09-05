@@ -1,0 +1,11 @@
+<div class="person-card" [class.fav]="isFav">
+  <h3 class="name">{{ name }}</h3>
+
+  <div *ngIf="!isFav">
+    <button class="fav-btn" (click)="setFav(this.name)">Set Favorite</button>
+  </div>
+
+  <div *ngIf="isFav">
+    <button class="unfav-btn" (click)="removeFav(this.name)">Remove Favorite</button>
+  </div>
+</div>

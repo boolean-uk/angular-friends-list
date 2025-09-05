@@ -1,0 +1,52 @@
+.person-card {
+  border: 2px solid #153a00;
+  padding: 15px 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  background-color: #006a35;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: #9ac9ff;
+  margin-bottom: 15px;
+}
+
+.person-card:hover {
+  transform: scale(1.03);
+}
+
+.person-card.fav {
+  border-color: rgb(0, 87, 81);
+  background-color: #003e44;
+}
+
+.fav-btn,
+.unfav-btn {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fav-btn {
+  background-color: #8766ff;
+  color: #ffffff;
+}
+
+.unfav-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.fav-btn:hover {
+  background-color: #492e89;
+}
+
+.unfav-btn:hover {
+  background-color: #d32f2f;
+}
