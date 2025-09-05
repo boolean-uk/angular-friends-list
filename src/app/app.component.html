@@ -1,11 +1,28 @@
-<h1>Friends list</h1>
-<div class="add-friend">
-  <input type="text" [(ngModel)]="newFriend" placeholder="Friend name" />
-  <button (click)="addFriend()">Add friend</button>
-</div>
-<div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
-</div>
-<div class="people">
-  <!-- Add your people component here -->
-</div>
+<!DOCTYPE html>
+<div class="container">
+  <h1>Friends App</h1>
+  <div class="add-friend">
+    <input type="text" [(ngModel)]="newFriend" placeholder="Add a friend" />
+    <button (click)="addFriend()">Add Friend</button>
+  </div>
+  <div class="favorite">
+    <ng-container *ngIf="favs.length === 1">
+      <h2>My favorite friend is {{ favs[0] }}</h2>
+    </ng-container>
+    <ng-container *ngIf="favs.length > 1">
+      <h2>My favorite friends are:</h2>
+      <div class="favList">{{ favs.join(', ') }}</div>
+    </ng-container>
+  </div>
+  <hr />
+
+  <app-people
+    *ngFor="let p of people"
+    [name]="p"
+    [isFav]="isinFav(p)"
+    (addFav)="addToFav($event)"
+    (deleteFav)="deleteFav($event)">
+  </app-people>
+
+  <hr />
+  </div>
