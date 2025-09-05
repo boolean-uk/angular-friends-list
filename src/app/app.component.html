@@ -4,8 +4,27 @@
   <button (click)="addFriend()">Add friend</button>
 </div>
 <div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+  @if (favorites.length === 0) {
+    <p>My favorite person is:</p>
+  } @else if (favorites.length === 1){
+    <p>My favorite person is: {{favorites[0]}}</p>
+  } @else {
+    <p>My favorite people are:</p>
+    <ul>
+      @for (person of favorites; track person) {
+        <li>{{person}}</li>
+      }
+    </ul>
+  }
 </div>
 <div class="people">
   <!-- Add your people component here -->
+   @for (person of people; track person) {
+    <app-people
+      [name] = "person"
+      [isFav] = "isInFav(person)"
+      (addFav) = "addFav($event)"
+      (removeFav) = "removeFav($event)"
+    ></app-people>
+   }
 </div>

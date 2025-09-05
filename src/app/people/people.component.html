@@ -1,0 +1,6 @@
+<h2>{{ name }}</h2>
+@if (isFav) {
+    <button (click)="removeFromFav(this.name)">Remove</button>
+} @else {
+    <button (click)="addToFav(this.name)">Add</button>
+}
