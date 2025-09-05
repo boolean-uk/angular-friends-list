@@ -1,0 +1,5 @@
+<div class="person">
+  <span>{{ name }}</span>
+  <button *ngIf="!isFav" (click)="addToFavs(name)">Add Favorite</button>
+  <button *ngIf="isFav" (click)="deleteFromFavs(name)">Delete Favorite</button>
+</div>
