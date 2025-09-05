@@ -1,0 +1,7 @@
+<p>{{this.myFave()}}</p>
+
+@if (!this.lastVoted()) {
+<button (click)="this.voted.emit(this.myFave())">Vote</button>
+} @else {
+    <p>Current selection</p>
+}
