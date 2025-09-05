@@ -15,3 +15,10 @@
   grid-template-columns: auto auto auto;
   gap: 0.2em;
 }
+
+.fav-list {
+  display:flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding:5px;
+ }
