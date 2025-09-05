@@ -1,0 +1,7 @@
+<p>{{this.person()}}</p>
+
+@if (!this.isFavourite()) {
+    <button (click)="this.voted.emit(this.person())">Add favourite!</button>
+} @else {
+    <p>current favourite</p>
+}
