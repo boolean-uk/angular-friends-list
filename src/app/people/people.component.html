@@ -1,0 +1,9 @@
+<p>{{this.myPerson()}}</p>
+
+@if (!this.lastVoted() && !this.favorites().includes(this.myPerson())) {
+<button (click)="this.voted.emit(this.myPerson())">Pick</button>
+} @else {
+    <p>Current selection</p>
+}
+
+<button (click)="this.remove.emit(myPerson())">Remove</button>
