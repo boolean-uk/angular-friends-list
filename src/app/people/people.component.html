@@ -1,0 +1,7 @@
+<ul>
+@for(p of people; track p) {
+    <li>{{ p }}
+    <button (click)="setFavorite(p)">Set as favorite</button>
+    </li>
+}
+</ul>

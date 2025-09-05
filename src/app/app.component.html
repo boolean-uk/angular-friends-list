@@ -6,6 +6,5 @@
 <div class="favorite">
   <p>My favorite person is: {{ favorite }}</p>
 </div>
-<div class="people">
-  <!-- Add your people component here -->
-</div>
+
+<app-people [people]="people" (favoriteSelected)="setAppFavorite($event)"></app-people>
