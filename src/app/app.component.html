@@ -4,7 +4,20 @@
   <button (click)="addFriend()">Add friend</button>
 </div>
 <div class="favorite">
-  <p>My favorite person is: {{ favorite }}</p>
+  <h3>My favorite people are:</h3>
+  <br />
+    <ul>
+      @for(f of favorites; track f) {
+      <li>{{ f }}</li>
+      }
+    </ul>
 </div>
 
-<app-people [people]="people" (favoriteSelected)="setAppFavorite($event)"></app-people>
+@for(p of people; track p) {
+<app-people
+  [person]="p"
+  [isFav]="isinFav(p)"
+  (addFav)="addAppFav($event)"
+  (delFav)="deleteAppFav($event)"
+></app-people>
+}
