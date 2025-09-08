@@ -10,6 +10,7 @@ export class AppComponent {
   favorite: string | null = null;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favs: string[] = [];
 
   addFriend() {
     if (!this.newFriend) {
@@ -17,5 +18,22 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  addFav(person: string): void {
+    console.log(person);
+    if (this.favs.indexOf(person) === -1){
+      this.favs.push(person);
+    }
+  }
+
+  deleteFav(person: string): void {
+    this.favs = this.favs.filter((p) => p !== person );
+  }
+  isInFav(person: string){
+    if (this.favs.indexOf(person) === -1){
+      return false;
+    }
+    return true;
   }
 }
