@@ -5,7 +5,24 @@
 </div>
 <div class="favorite">
   <p>My favorite person is: {{ favorite }}</p>
+    <app-people-component *ngFor="let p of favs"
+    [name]="p"
+    [isFav]="isInFav(p)"
+    (addFav)="addFav($event)"
+    (deleteFav)="deleteFav($event)"
+  ></app-people-component>
 </div>
 <div class="people">
-  <!-- Add your people component here -->
+  <p>My favorite person is: {{ favs }}</p>
+  <app-people-component
+    *ngFor="let p of people"
+    [name]="p"
+    [isFav]="isInFav(p)"
+    (addFav)="addFav($event)"
+    (deleteFav)="deleteFav($event)">
+  </app-people-component>
 </div>
+
+
+
+
