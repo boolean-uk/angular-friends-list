@@ -1,0 +1,37 @@
+<main>
+  <h1>{{title}}</h1>
+  <div class="add-people">
+    <input type="text" [(ngModel)]="newPeople" placeholder="Name of people" />
+    <button (click)="removePeople()">Remove man</button>
+    <button (click)="addPeople()">Add people</button>
+  </div>
+
+  <div class="favourite">
+    <p>My favourite people is: </p>
+    <ul>
+    @for (item of favourite.sort(); track item) {
+      <app-friends
+      [fav]="item"
+      (changed)="handleChange($event)"
+      ></app-friends>
+    }
+    </ul>
+
+
+    
+  </div>
+  <div class="peoples">
+    @for (item of people; track item) {
+      <app-people
+      [myPeople]="item"
+      (voted)="addFavourite($event)"
+      (deleted)="removeFavourite($event)"
+      [lastVoted]="favourite.includes(item)"
+      ></app-people>
+    }
+  </div>
+
+
+</main>
+
+<router-outlet />

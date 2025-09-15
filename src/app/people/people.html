@@ -1,0 +1,8 @@
+<p>{{this.myPeople()}}</p>
+
+@if (!this.lastVoted()) {
+<button (click)="this.voted.emit(this.myPeople())">Vote</button>
+} @else {
+    <button (click)="this.deleted.emit(this.myPeople())">Remove</button>
+
+}

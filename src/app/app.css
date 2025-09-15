@@ -4,13 +4,13 @@
   padding: 0 0.5em;
 }
 
-.favorite {
+.favourite {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.people {
+.games {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 0.2em;
